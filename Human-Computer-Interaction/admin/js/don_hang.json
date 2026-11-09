@@ -4,8 +4,8 @@
         "ngay_hoa_don": "10/11/2016",
         "ma_khach_hang": "2",
         "Tri_gia": "10000000",
-        "hinh_thuc_thanh_toan": "Tiền mặt",
-        "ghi_chu": "Không có ghi chú",
+        "hinh_thuc_thanh_toan": "Cash",
+        "ghi_chu": "No notes",
         "trang_thai": "0"
     },
     {
@@ -13,8 +13,8 @@
         "ngay_hoa_don": "15/11/2016",
         "ma_khach_hang": "2",
         "Tri_gia": "10000000",
-        "hinh_thuc_thanh_toan": "Chuyển khoản",
-        "ghi_chu": "Không có ghi chú",
+        "hinh_thuc_thanh_toan": "Bank transfer",
+        "ghi_chu": "No notes",
         "trang_thai": "1"
     },
     {
@@ -22,7 +22,7 @@
         "ngay_hoa_don": "21/12/2016",
         "ma_khach_hang": "10",
         "Tri_gia": "326970000",
-        "hinh_thuc_thanh_toan": "Thanh toán bằng thẻ quốc tế Visa/Master",
+        "hinh_thuc_thanh_toan": "Pay with an international Visa/Mastercard",
         "ghi_chu": "",
         "trang_thai": "0"
     },
@@ -31,7 +31,7 @@
         "ngay_hoa_don": "21/12/2016",
         "ma_khach_hang": "1",
         "Tri_gia": "507450000",
-        "hinh_thuc_thanh_toan": "Thanh toán bằng thẻ quốc tế Visa/Master",
+        "hinh_thuc_thanh_toan": "Pay with an international Visa/Mastercard",
         "ghi_chu": "",
         "trang_thai": "0"
     },
@@ -40,7 +40,7 @@
         "ngay_hoa_don": "21/12/2016",
         "ma_khach_hang": "4",
         "Tri_gia": "741610000",
-        "hinh_thuc_thanh_toan": "Thanh toán bằng thẻ quốc tế Visa/Master",
+        "hinh_thuc_thanh_toan": "Pay with an international Visa/Mastercard",
         "ghi_chu": "",
         "trang_thai": "0"
     },
@@ -49,7 +49,7 @@
         "ngay_hoa_don": "21/12/2016",
         "ma_khach_hang": "2",
         "Tri_gia": "162520000",
-        "hinh_thuc_thanh_toan": "Thanh toán bằng thẻ quốc tế Visa/Master",
+        "hinh_thuc_thanh_toan": "Pay with an international Visa/Mastercard",
         "ghi_chu": "",
         "trang_thai": "0"
     },
@@ -58,7 +58,7 @@
         "ngay_hoa_don": "21/12/2016",
         "ma_khach_hang": "5",
         "Tri_gia": "152330000",
-        "hinh_thuc_thanh_toan": "Thanh toán bằng thẻ quốc tế Visa/Master",
+        "hinh_thuc_thanh_toan": "Pay with an international Visa/Mastercard",
         "ghi_chu": "",
         "trang_thai": "0"
     }

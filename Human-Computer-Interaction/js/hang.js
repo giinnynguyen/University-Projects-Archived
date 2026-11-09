@@ -19,11 +19,11 @@ function hien_thi_san_pham(displayArr) {
         var box = document.createElement('div');
         box.className = 'col-md-3';
         table.append(box);
-        //tao new product (hinh anh)
+        //create new product (image)
         var new_pr = document.createElement('a');
         new_pr.className = 'new-pr';
         box.append(new_pr);
-        //chen hinh anh product
+        //insert product image
         var image = document.createElement('img');
         image.src = baseUrl + "/imageProduct/" + displayArr[i]["image"];
         new_pr.append(image);
@@ -31,18 +31,18 @@ function hien_thi_san_pham(displayArr) {
         var footer = document.createElement('div');
         footer.className = 'footer';
         box.append(footer);
-        //ten san pham
+        //product name
         var name = document.createElement('p');
         name.innerHTML = displayArr[i]["productName"];
         footer.append(name);
-        //gia goc
+        //original price
         var price = document.createElement('p');
         price.className = 'price';
-        price.innerHTML = "Giá gốc: " + parseInt(displayArr[i]["price"]).formatMoney(0, ",", ".") + "VNĐ";
+        price.innerHTML = "Original price: " + parseInt(displayArr[i]["price"]).formatMoney(0, ",", ".") + "VND";
         footer.append(price);
         var sale = document.createElement('p');
         sale.className = 'sale-';
-        sale.innerHTML = "Giảm còn: " + parseInt(displayArr[i]["sale"]).formatMoney(0, ",", ".") + "VNĐ";
+        sale.innerHTML = "Now only: " + parseInt(displayArr[i]["sale"]).formatMoney(0, ",", ".") + "VND";
         footer.append(sale);
         var cart = document.createElement('a');
         var list = document.createElement('a');
@@ -78,11 +78,11 @@ function hien_thi_san_pham(displayArr) {
             var box = document.createElement('div');
             box.className = 'col-md-3';
             table.append(box);
-            //tao new product (hinh anh)
+            //create new product (image)
             var new_pr = document.createElement('a');
             new_pr.className = 'new-pr';
             box.append(new_pr);
-            //chen hinh anh product
+            //insert product image
             var image = document.createElement('img');
             image.src = baseUrl + "/imageProduct/" + displayArr[i + 1]["image"];
             new_pr.append(image);
@@ -90,18 +90,18 @@ function hien_thi_san_pham(displayArr) {
             var footer = document.createElement('div');
             footer.className = 'footer';
             box.append(footer);
-            //ten san pham
+            //product name
             var name = document.createElement('p');
             name.innerHTML = displayArr[i + 1]["productName"];
             footer.append(name);
-            //gia goc
+            //original price
             var price = document.createElement('p');
             price.className = 'price';
-            price.innerHTML = "Giá gốc: " + parseInt(displayArr[i + 1]["price"]).formatMoney(0, ",", ".") + "VNĐ";
+            price.innerHTML = "Original price: " + parseInt(displayArr[i + 1]["price"]).formatMoney(0, ",", ".") + "VND";
             footer.append(price);
             var sale = document.createElement('p');
             sale.className = 'sale-';
-            sale.innerHTML = "Giảm còn: " + parseInt(displayArr[i + 1]["sale"]).formatMoney(0, ",", ".") + "VNĐ";
+            sale.innerHTML = "Now only: " + parseInt(displayArr[i + 1]["sale"]).formatMoney(0, ",", ".") + "VND";
             footer.append(sale);
             var cart = document.createElement('a');
             var list = document.createElement('a');
@@ -138,11 +138,11 @@ function hien_thi_san_pham(displayArr) {
             var box = document.createElement('div');
             box.className = 'col-md-3';
             table.append(box);
-            //tao new product (hinh anh)
+            //create new product (image)
             var new_pr = document.createElement('a');
             new_pr.className = 'new-pr';
             box.append(new_pr);
-            //chen hinh anh product
+            //insert product image
             var image = document.createElement('img');
             image.src = baseUrl + "/imageProduct/" + displayArr[i + 2]["image"];
             new_pr.append(image);
@@ -150,19 +150,19 @@ function hien_thi_san_pham(displayArr) {
             var footer = document.createElement('div');
             footer.className = 'footer';
             box.append(footer);
-            //ten san pham
+            //product name
             var name = document.createElement('p');
             name.innerHTML = displayArr[i + 2]["productName"];
 
             footer.append(name);
-            //gia goc
+            //original price
             var price = document.createElement('p');
             price.className = 'price';
-            price.innerHTML = "Giá gốc: " + parseInt(displayArr[i + 2]["price"]).formatMoney(0, ",", ".") + "VNĐ";
+            price.innerHTML = "Original price: " + parseInt(displayArr[i + 2]["price"]).formatMoney(0, ",", ".") + "VND";
             footer.append(price);
             var sale = document.createElement('p');
             sale.className = 'sale-';
-            sale.innerHTML = "Giảm còn: " + parseInt(displayArr[i + 2]["sale"]).formatMoney(0, ",", ".") + "VNĐ";
+            sale.innerHTML = "Now only: " + parseInt(displayArr[i + 2]["sale"]).formatMoney(0, ",", ".") + "VND";
             footer.append(sale);
             var cart = document.createElement('a');
             var list = document.createElement('a');
@@ -198,11 +198,11 @@ function hien_thi_san_pham(displayArr) {
             var box = document.createElement('div');
             box.className = 'col-md-3';
             table.append(box);
-            //tao new product (hinh anh)
+            //create new product (image)
             var new_pr = document.createElement('a');
             new_pr.className = 'new-pr';
             box.append(new_pr);
-            //chen hinh anh product
+            //insert product image
             var image = document.createElement('img');
             image.src = baseUrl + "/imageProduct/" + displayArr[i + 3]["image"];
             new_pr.append(image);
@@ -210,18 +210,18 @@ function hien_thi_san_pham(displayArr) {
             var footer = document.createElement('div');
             footer.className = 'footer';
             box.append(footer);
-            //ten san pham
+            //product name
             var name = document.createElement('p');
             name.innerHTML = displayArr[i + 3]["productName"];
             footer.append(name);
-            //gia goc
+            //original price
             var price = document.createElement('p');
             price.className = 'price';
-            price.innerHTML = "Giá gốc: " + parseInt(displayArr[i + 3]["price"]).formatMoney(0, ",", ".") + "VNĐ";
+            price.innerHTML = "Original price: " + parseInt(displayArr[i + 3]["price"]).formatMoney(0, ",", ".") + "VND";
             footer.append(price);
             var sale = document.createElement('p');
             sale.className = 'sale-';
-            sale.innerHTML = "Giảm còn: " + parseInt(displayArr[i + 3]["salse"]).formatMoney(0, ",", ".") + "VNĐ";
+            sale.innerHTML = "Now only: " + parseInt(displayArr[i + 3]["salse"]).formatMoney(0, ",", ".") + "VND";
             footer.append(sale);
             var cart = document.createElement('a');
             var list = document.createElement('a');
@@ -253,9 +253,9 @@ function hien_thi_san_pham(displayArr) {
         }
     }
 }
-//**hien thi san pham end **//
+//**show products end **//
 
-//**hien thi hang start**/
+//**show brands start**/
 function hien_thi_hang() {
     var showProduct = document.getElementById("product");
     for (var i = 0; i < company.length; i++) {
@@ -276,7 +276,7 @@ function hien_thi_hang() {
         hien_thi_san_pham(arr);
     }
 }
-/**hien thi hang end **/
+/**show brands end **/
 function filter(option) {
     var arr = [];
     $.each(product, function () {
@@ -285,11 +285,11 @@ function filter(option) {
     });
     return arr;
 }
-//phan tram giam gia
+//discount percentage
 function percentPerSale(arr) {
     var sale = parseInt(arr.sale);
     var price = parseInt(arr.price);
-    var priceSale = price - sale; //so tien giam gia
+    var priceSale = price - sale; //discounted price
     var percent = (priceSale * 100) / price;
     var result = Math.round(percent * 100) / 100;
     return result;

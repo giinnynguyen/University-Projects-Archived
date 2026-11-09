@@ -60,7 +60,7 @@ $(document)
 
             $(".shopping-cart").hover(function () {
                 $(this).parent().addClass('relative');
-                $(this).parent().append("<div class='box'><div class='arrow_box'>Chọn mua</div></div>");
+                $(this).parent().append("<div class='box'><div class='arrow_box'>Buy</div></div>");
             },
                 function () {
                     $(this).parent().removeClass('relative');
@@ -69,7 +69,7 @@ $(document)
 
             $(".detail").hover(function () {
                 $(this).parent().addClass('relative');
-                $(this).parent().append("<div class='box1'><div class='arrow_box'>Chi tiết</div></div>");
+                $(this).parent().append("<div class='box1'><div class='arrow_box'>Details</div></div>");
             },
                 function () {
                     $(this).parent().removeClass('relative');

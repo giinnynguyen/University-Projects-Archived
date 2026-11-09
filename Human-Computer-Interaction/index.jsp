@@ -75,7 +75,7 @@
         }
 
         body {
-            background-image: url('background.png');
+            background-image: url('Human-Computer-Interaction/background.png');
             background-repeat: no-repeat;
             background-position: center;
         }

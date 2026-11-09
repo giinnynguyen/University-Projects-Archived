@@ -10,18 +10,18 @@
         "newProduct": "yes",
         "dateCreate": "2/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Mac OS X"
+            "Operating system": "Mac OS X"
         }
     },
     {
@@ -35,18 +35,18 @@
         "newProduct": "no",
         "dateCreate": "2/10/2016",
         "detail": {
-            "CPU": "Intel Core i7 6200U , 2.50 GHz, tốc độ tối đa 3.20 GHz ",
-            "Bộ nhớ đệm": "4 MB Cache",
+            "CPU": "Intel Core i7 6200U , 2.50 GHz, max speed 3.20 GHz ",
+            "Cache": "4 MB Cache",
             "RAM": "SDRAM DDR3L, 4GB, 1600 MHz",
-            "Ổ cứng": "SATA, 500GB",
-            "Đĩa quang": "DVD-RW SMT Double Layer",
-            "Đồ họa": "AMD Radeon, R5 M315, 2GB",
-            "Màn hình": "LED HD Anti-Glare Wide Screen, 15.6 inch, 1366 x 768 Pixels ",
-            "Âm thanh": "Intel High Definition Audio,Waves MaxxAudio",
+            "Hard drive": "SATA, 500GB",
+            "Optical drive": "DVD-RW SMT Double Layer",
+            "Graphics": "AMD Radeon, R5 M315, 2GB",
+            "Display": "LED HD Anti-Glare Wide Screen, 15.6 inch, 1366 x 768 Pixels ",
+            "Audio": "Intel High Definition Audio,Waves MaxxAudio",
             "WiFi": "Wi-Fi 802.11 b/g/n/ac",
             "LAN": "10 / 100 / 1000 Mbps",
             "PIN": "4-Cell Li-Ion",
-            "Hệ điều hành": "Linux"
+            "Operating system": "Linux"
         }
     },
     {
@@ -60,18 +60,18 @@
         "newProduct": "yes",
         "dateCreate": "1/12/2016",
         "detail": {
-            "CPU": "Intel Core i7 6500U , 2.50 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "4 MB Cache",
+            "CPU": "Intel Core i7 6500U , 2.50 GHz, max speed 3.10 GHz ",
+            "Cache": "4 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SATA, 1TB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, R5 M335, 4GB",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SATA, 1TB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, R5 M335, 4GB",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "4-Cell Li-Ion",
-            "Hệ điều hành": "Windows 10"
+            "Operating system": "Windows 10"
         }
     },
     {
@@ -86,17 +86,17 @@
         "dateCreate": "2/12/2016",
         "detail": {
             "CPU": "Intel Core i3 6100U , 2.30 GHz",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 4GB, 1600 MHz",
-            "Ổ cứng": "SATA, 1TB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel HD Graphics, Share",
-            "Màn hình": "LED HD, 14 inch, 1366 x 768 Pixels ",
-            "Âm thanh": "High Definition Audio, Dolby Advanced Audio",
+            "Hard drive": "SATA, 1TB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel HD Graphics, Share",
+            "Display": "LED HD, 14 inch, 1366 x 768 Pixels ",
+            "Audio": "High Definition Audio, Dolby Advanced Audio",
             "WiFi": "Wi-Fi 802.11 b/g/n/ac",
             "LAN": "10 / 100 / 1000 Mbps",
             "PIN": "2-Cells Li-Ion",
-            "Hệ điều hành": "Free DOS"
+            "Operating system": "Free DOS"
         }
     },
     {
@@ -110,18 +110,18 @@
         "newProduct": "no",
         "dateCreate": "2/10/2016",
         "detail": {
-            "CPU": "Intel Core i7 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "4 MB Cache",
+            "CPU": "Intel Core i7 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "4 MB Cache",
             "RAM": "SDRAM DDR3L, 4GB, 1600 MHz",
-            "Ổ cứng": "SATA, 1TB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "nVidia GeForce, GT 940M, 2GB DDR3",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SATA, 1TB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "nVidia GeForce, GT 940M, 2GB DDR3",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "4-Cell Li-Ion",
-            "Hệ điều hành": "Windows 10"
+            "Operating system": "Windows 10"
         }
     },
     {
@@ -135,18 +135,18 @@
         "newProduct": "no",
         "dateCreate": "2/9/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "2-Cells Li-Ion",
-            "Hệ điều hành": "Linux"
+            "Operating system": "Linux"
         }
     },
     {
@@ -160,18 +160,18 @@
         "newProduct": "no",
         "dateCreate": "4/11/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "linux"
+            "Operating system": "linux"
         }
     },
     {
@@ -185,18 +185,18 @@
         "newProduct": "yes",
         "dateCreate": "4/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Linux"
+            "Operating system": "Linux"
         }
     },
     {
@@ -210,18 +210,18 @@
         "newProduct": "yes",
         "dateCreate": "2/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Mac OS X"
+            "Operating system": "Mac OS X"
         }
     },
     {
@@ -235,18 +235,18 @@
         "newProduct": "no",
         "dateCreate": "2/9/2016",
         "detail": {
-            "CPU": "Intel Core i3 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i3 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 500GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "HD LED, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 500GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "HD LED, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Windows"
+            "Operating system": "Windows"
         }
     },
     {
@@ -260,18 +260,18 @@
         "newProduct": "no",
         "dateCreate": "2/8/2016",
         "detail": {
-            "CPU": "Intel Core i3 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i3 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 500GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "HD LED, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 500GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "HD LED, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Windows"
+            "Operating system": "Windows"
         }
     },
     {
@@ -285,18 +285,18 @@
         "newProduct": "yes",
         "dateCreate": "2/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Free DOS"
+            "Operating system": "Free DOS"
         }
     },
     {
@@ -310,18 +310,18 @@
         "newProduct": "no",
         "dateCreate": "2/8/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Free DOS"
+            "Operating system": "Free DOS"
         }
     },
     {
@@ -335,18 +335,18 @@
         "newProduct": "yes",
         "dateCreate": "2/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Mac OS X"
+            "Operating system": "Mac OS X"
         }
     },
     {
@@ -360,18 +360,18 @@
         "newProduct": "no",
         "dateCreate": "2/10/2016",
         "detail": {
-            "CPU": "Intel Core i7 6200U , 2.50 GHz, tốc độ tối đa 3.20 GHz ",
-            "Bộ nhớ đệm": "4 MB Cache",
+            "CPU": "Intel Core i7 6200U , 2.50 GHz, max speed 3.20 GHz ",
+            "Cache": "4 MB Cache",
             "RAM": "SDRAM DDR3L, 4GB, 1600 MHz",
-            "Ổ cứng": "SATA, 500GB",
-            "Đĩa quang": "DVD-RW SMT Double Layer",
-            "Đồ họa": "AMD Radeon, R5 M315, 2GB",
-            "Màn hình": "LED HD Anti-Glare Wide Screen, 15.6 inch, 1366 x 768 Pixels ",
-            "Âm thanh": "Intel High Definition Audio,Waves MaxxAudio",
+            "Hard drive": "SATA, 500GB",
+            "Optical drive": "DVD-RW SMT Double Layer",
+            "Graphics": "AMD Radeon, R5 M315, 2GB",
+            "Display": "LED HD Anti-Glare Wide Screen, 15.6 inch, 1366 x 768 Pixels ",
+            "Audio": "Intel High Definition Audio,Waves MaxxAudio",
             "WiFi": "Wi-Fi 802.11 b/g/n/ac",
             "LAN": "10 / 100 / 1000 Mbps",
             "PIN": "4-Cell Li-Ion",
-            "Hệ điều hành": "Linux"
+            "Operating system": "Linux"
         }
     },
     {
@@ -385,18 +385,18 @@
         "newProduct": "yes",
         "dateCreate": "1/12/2016",
         "detail": {
-            "CPU": "Intel Core i7 6500U , 2.50 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "4 MB Cache",
+            "CPU": "Intel Core i7 6500U , 2.50 GHz, max speed 3.10 GHz ",
+            "Cache": "4 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SATA, 1TB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, R5 M335, 4GB",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SATA, 1TB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, R5 M335, 4GB",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "4-Cell Li-Ion",
-            "Hệ điều hành": "Windows 10"
+            "Operating system": "Windows 10"
         }
     },
     {
@@ -411,17 +411,17 @@
         "dateCreate": "2/12/2016",
         "detail": {
             "CPU": "Intel Core i3 6100U , 2.30 GHz",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 4GB, 1600 MHz",
-            "Ổ cứng": "SATA, 1TB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel HD Graphics, Share",
-            "Màn hình": "LED HD, 14 inch, 1366 x 768 Pixels ",
-            "Âm thanh": "High Definition Audio, Dolby Advanced Audio",
+            "Hard drive": "SATA, 1TB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel HD Graphics, Share",
+            "Display": "LED HD, 14 inch, 1366 x 768 Pixels ",
+            "Audio": "High Definition Audio, Dolby Advanced Audio",
             "WiFi": "Wi-Fi 802.11 b/g/n/ac",
             "LAN": "10 / 100 / 1000 Mbps",
             "PIN": "2-Cells Li-Ion",
-            "Hệ điều hành": "Free DOS"
+            "Operating system": "Free DOS"
         }
     },
     {
@@ -435,18 +435,18 @@
         "newProduct": "no",
         "dateCreate": "2/10/2016",
         "detail": {
-            "CPU": "Intel Core i7 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "4 MB Cache",
+            "CPU": "Intel Core i7 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "4 MB Cache",
             "RAM": "SDRAM DDR3L, 4GB, 1600 MHz",
-            "Ổ cứng": "SATA, 1TB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "nVidia GeForce, GT 940M, 2GB DDR3",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SATA, 1TB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "nVidia GeForce, GT 940M, 2GB DDR3",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "4-Cell Li-Ion",
-            "Hệ điều hành": "Windows 10"
+            "Operating system": "Windows 10"
         }
     },
     {
@@ -460,18 +460,18 @@
         "newProduct": "no",
         "dateCreate": "2/9/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "2-Cells Li-Ion",
-            "Hệ điều hành": "Linux"
+            "Operating system": "Linux"
         }
     },
     {
@@ -485,18 +485,18 @@
         "newProduct": "no",
         "dateCreate": "4/11/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "linux"
+            "Operating system": "linux"
         }
     },
     {
@@ -510,18 +510,18 @@
         "newProduct": "yes",
         "dateCreate": "4/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Linux"
+            "Operating system": "Linux"
         }
     },
     {
@@ -535,18 +535,18 @@
         "newProduct": "yes",
         "dateCreate": "2/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Mac OS X"
+            "Operating system": "Mac OS X"
         }
     },
     {
@@ -560,18 +560,18 @@
         "newProduct": "no",
         "dateCreate": "2/9/2016",
         "detail": {
-            "CPU": "Intel Core i3 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i3 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 500GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "HD LED, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 500GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "HD LED, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Windows"
+            "Operating system": "Windows"
         }
     },
     {
@@ -585,18 +585,18 @@
         "newProduct": "no",
         "dateCreate": "2/8/2016",
         "detail": {
-            "CPU": "Intel Core i3 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i3 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 500GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "HD LED, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 500GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "HD LED, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Windows"
+            "Operating system": "Windows"
         }
     },
     {
@@ -610,18 +610,18 @@
         "newProduct": "yes",
         "dateCreate": "2/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Free DOS"
+            "Operating system": "Free DOS"
         }
     },
     {
@@ -635,18 +635,18 @@
         "newProduct": "yes",
         "dateCreate": "4/12/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Linux"
+            "Operating system": "Linux"
         }
     },
     {
@@ -660,18 +660,18 @@
         "newProduct": "no",
         "dateCreate": "2/8/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "Free DOS"
+            "Operating system": "Free DOS"
         }
     },
     {
@@ -685,18 +685,18 @@
         "newProduct": "no",
         "dateCreate": "4/11/2016",
         "detail": {
-            "CPU": "Intel Core i5 , 2.70 GHz, tốc độ tối đa 3.10 GHz ",
-            "Bộ nhớ đệm": "3 MB Cache",
+            "CPU": "Intel Core i5 , 2.70 GHz, max speed 3.10 GHz ",
+            "Cache": "3 MB Cache",
             "RAM": "SDRAM DDR3, 8GB, 1600 MHz",
-            "Ổ cứng": "SSD, 256GB",
-            "Đĩa quang": "SuperMulti DVD",
-            "Đồ họa": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
-            "Màn hình": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
-            "Âm thanh": "Intel High Definition Audio",
+            "Hard drive": "SSD, 256GB",
+            "Optical drive": "SuperMulti DVD",
+            "Graphics": "Intel Iris Graphics, Intel HD Graphics 6100, Share",
+            "Display": "Retina LED-backlit with IPS, 13.3 inch, 2560 x 1600 Pixels ",
+            "Audio": "Intel High Definition Audio",
             "WiFi": "Wi-Fi 802.11ac - IEEE 802.11a/b/g/n",
             "LAN": "10 / 100 Mbps",
             "PIN": "74.9 watt-hour lithium polymer",
-            "Hệ điều hành": "linux"
+            "Operating system": "linux"
         }
     }
 ]

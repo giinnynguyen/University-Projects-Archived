@@ -29,19 +29,19 @@
 	<section class="main-content" id="main-content">
 		<div class="content-header">
 			<a data-toggle="modal" href="#form-content" class="btn btn-primary fa fa-plus">&nbsp;
-				Thêm</a>
-			<input placeholder="Nhập tên.." id="search">
+				Add</a>
+			<input placeholder="Enter name.." id="search">
 			<div class="company">
-				Hãng:<select id="selectCompany" style="margin-bottom: 0">
-					<option>Tất cả</option>
+				Brand:<select id="selectCompany" style="margin-bottom: 0">
+					<option>All</option>
 				</select>
 			</div>
 
 			<div class="import" style="display: inline-block; float: right;">
 				<a id="a"></a>
 				<a class="btn btn-warning" href="javascript:void(0)" onclick="Export_Product()">Export</a>
-				<label for="fileImport" class="btn btn-success">Chọn file để import</label>
-				<input type="file" id="fileImport" title="Chọn tệp json để import" style="display: none">
+				<label for="fileImport" class="btn btn-success">Choose file to import</label>
+				<input type="file" id="fileImport" title="Choose a JSON file to import" style="display: none">
 				<a class="btn btn-success" href="javascript:void(0)" onclick="Import_Product()">Import</a>
 			</div>
 
@@ -51,14 +51,14 @@
 				<thead>
 					<tr>
 						<th>ID</th>
-						<th>Tên sp</th>
-						<th>Số lg</th>
-						<th>Hãng</th>
-						<th>Giá (VNĐ)</th>
+						<th>Product</th>
+						<th>Qty</th>
+						<th>Brand</th>
+						<th>Price (VND)</th>
 						<th>Sale</th>
-						<th>Ảnh</th>
-						<th>Ngày tạo</th>
-						<th>Mô tả</th>
+						<th>Photo</th>
+						<th>Date created</th>
+						<th>Description</th>
 						<th>&nbsp;
 						</th>
 					</tr>
@@ -78,18 +78,18 @@
 	<div id="form-content" class="modal hide fade in" style="display: none; ">
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">×</a>
-			<h3>Tạo sản phẩm mới</h3>
+			<h3>Create new product</h3>
 		</div>
 		<div>
 			<form class="contact" name="form">
 				<fieldset>
 					<div class="modal-body">
 						<ul class="nav nav-list">
-							<li class="nav-header">Tên sản phẩm</li>
+							<li class="nav-header">Product name</li>
 							<li><input class="input-xlarge" value="" type="text" name="productName" /></li>
-							<li class="nav-header">Số lượng</li>
+							<li class="nav-header">Quantity</li>
 							<li><input class="input-xlarge" value="" type="number" name="amount" min="0" /></li>
-							<li class="nav-header">Hãng</li>
+							<li class="nav-header">Brand</li>
 							<li>
 								<select id="companyNew" name="company">
 									<option>Apple</option>
@@ -100,14 +100,14 @@
 									<option>Lenovo</option>
 								</select>
 							</li>
-							<li class="nav-header">Giá</li>
+							<li class="nav-header">Price</li>
 							<li><input class="input-xlarge input-price" value="" type="text" name="price" min="0" />
 							</li>
 							<li class="nav-header">Sale</li>
 							<li><input class="input-xlarge input-sale" value="" type="text" name="sale" min="0" /></li>
-							<li class="nav-header">Ảnh</li>
+							<li class="nav-header">Photo</li>
 							<li><input class="input-xlarge" value="" type="file" name="image" accept="image/*" /></li>
-							<li class="nav-header">Mô tả
+							<li class="nav-header">Description
 								<ul>
 									<li class="nav-header">CPU</li>
 									<li><input list="cpu" class="input-xlarge" value="" type="text" name="cpu" /></li>
@@ -122,7 +122,7 @@
 										<option value="AMD Athlon">
 									</datalist>
 
-									<li class="nav-header">Bộ nhớ đệm</li>
+									<li class="nav-header">Cache</li>
 									<li><input list="buffer" class="input-xlarge" value="" type="text"
 											name="bufferMemory" /></li>
 									<datalist id="buffer">
@@ -143,15 +143,15 @@
 										<option value="DDR3L">
 									</datalist>
 
-									<li class="nav-header">Ổ cứng</li>
+									<li class="nav-header">Hard drive</li>
 									<li><input class="input-xlarge" value="" type="text" name="hdd" /></li>
-									<li class="nav-header">Đĩa quang</li>
+									<li class="nav-header">Optical drive</li>
 									<li><input class="input-xlarge" value="" type="text" name="dvd" /></li>
-									<li class="nav-header">Đồ họa</li>
+									<li class="nav-header">Graphics</li>
 									<li><input class="input-xlarge" value="" type="text" name="vga" /></li>
-									<li class="nav-header">Màn hình</li>
+									<li class="nav-header">Display</li>
 									<li><input class="input-xlarge" value="" type="text" name="screen" /></li>
-									<li class="nav-header">Âm thanh</li>
+									<li class="nav-header">Audio</li>
 									<li><input class="input-xlarge" value="" type="text" name="audio" /></li>
 									<li class="nav-header">Wifi</li>
 									<li><input class="input-xlarge" value="" type="text" name="wifi" /></li>
@@ -159,7 +159,7 @@
 									<li><input class="input-xlarge" value="" type="text" name="lan" /></li>
 									<li class="nav-header">Pin</li>
 									<li><input class="input-xlarge" value="" type="text" name="pin" /></li>
-									<li class="nav-header">HĐH</li>
+									<li class="nav-header">OS</li>
 
 									<input list="os" class="input-xlarge" name="hdh" type="text">
 									<datalist id="os">
@@ -177,8 +177,8 @@
 			</form>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-success" id="submit">Tạo sản phẩm</button>
-			<a href="#" class="btn" data-dismiss="modal">Đóng</a>
+			<button class="btn btn-success" id="submit">Create product</button>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
 		</div>
 	</div>
 

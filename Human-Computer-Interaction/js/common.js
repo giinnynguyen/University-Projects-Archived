@@ -57,11 +57,11 @@ function sanpham(ma_san_pham) {
     }
 }
 
-//phan tram giam gia
+//discount percentage
 function percentPerSale(arr) {
     var sale = parseInt(arr.sale);
     var price = parseInt(arr.price);
-    var priceSale = price - sale; //so tien giam gia
+    var priceSale = price - sale; //discounted price
     var percent = (priceSale * 100) / price;
     var result = Math.round(percent * 100) / 100;
     return result;

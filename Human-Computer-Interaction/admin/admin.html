@@ -26,13 +26,13 @@
 			<h1 class="center" style="padding-bottom:15px; padding-top: 15px;">LOGIN</h1>
 			<form action="" id="form-admin">
 				<div class="form-controll center">
-					<p>Hãy dùng tài khoản của bạn để đăng nhập</p>
+					<p>Use your account to log in</p>
 				</div>
-				<div class="form-controll"> <input type="text" placeholder="Tài khoản" class="font-awesome" name="user"
+				<div class="form-controll"> <input type="text" placeholder="Account" class="font-awesome" name="user"
 						\></div>
-				<div class="form-controll"> <input type="password" placeholder="Mật khẩu" size="35" name="pass"></div>
+				<div class="form-controll"> <input type="password" placeholder="Password" size="35" name="pass"></div>
 				<div class="form-controll" style="text-align: center"><input type="submit" name="submit"
-						value="Đăng nhập" /></div>
+						value="Log in" /></div>
 			</form>
 
 			<script>
@@ -48,7 +48,7 @@
 						};
 					};
 					if (localStorage.login == "false") {
-						alert("Tài khoản hoặc mật khẩu không hợp lệ");
+						alert("Invalid username or password");
 					}
 					e.preventDefault();
 
@@ -65,7 +65,7 @@
 				// 		 window.open('manageProduct.html')
 				// 		  			};
 				// 		   };
-				// 		    alert("Tài khoản hoặc mật khẩu không hợp lệ");/*displays error message*/
+				// 		    alert("Invalid username or password");/*displays error message*/
 				// }
 			</script>
 

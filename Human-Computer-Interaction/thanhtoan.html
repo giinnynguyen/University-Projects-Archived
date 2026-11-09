@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Thanh toán</title>
+  <title>Checkout</title>
   <link rel="icon" type="image/icon" href="img/icon.png">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -28,7 +28,7 @@
       $("tbody").html(function () {
         var s = "";
         for (var i = 0; i < loginUser.cart.length; i++) {
-          s += " <tr><td>" + loginUser.cart[i].ten_san_pham + "</td><td>" + loginUser.cart[i].count + "</td><td>" + (loginUser.cart[i].count * loginUser.cart[i].price).formatMoney(0, ",", ".") + " đ</td></tr>";
+          s += " <tr><td>" + loginUser.cart[i].ten_san_pham + "</td><td>" + loginUser.cart[i].count + "</td><td>" + (loginUser.cart[i].count * loginUser.cart[i].price).formatMoney(0, ",", ".") + " VND</td></tr>";
         };
         return s;
 
@@ -49,45 +49,45 @@
   <div class="body-page" id="body">
     <div class="container" style="min-height: 500px">
       <ul class="one-step-checkout clearfix">
-        <h1 class="checkout_header">Thanh toán</h1>
+        <h1 class="checkout_header">Checkout</h1>
 
         <form action="" class="form">
           <div id="onestepcheckout-shipping-payment-review">
             <div class="order-review-section">
-              <h3>Phương thức thanh toán</h3>
+              <h3>Payment methods</h3>
               <div class="clear"></div>
               <div class="onestepcheckout-payment-methods">
                 <dl class="sp-methods">
                   <dt>
                     <input type="radio" id="payment" name="payment" checked
-                      value="Thanh toán bằng thẻ quốc tế Visa/Master">
-                    <label for="">Thanh toán bằng thẻ quốc tế Visa/Master</label>
+                      value="Pay with an international Visa/Mastercard">
+                    <label for="">Pay with an international Visa/Mastercard</label>
                   </dt>
                   <dt>
-                    <input type="radio" id="payment" name="payment" value="Thanh toán bằng thẻ ATM nội địa">
-                    <label for="">Thanh toán bằng thẻ ATM nội địa</label>
+                    <input type="radio" id="payment" name="payment" value="Pay with a domestic ATM card">
+                    <label for="">Pay with a domestic ATM card</label>
                   </dt>
                   <dt>
-                    <input type="radio" id="payment" name="payment" value="Chuyển khoản ngân hàng">
-                    <label for="">Chuyển khoản ngân hàng</label>
+                    <input type="radio" id="payment" name="payment" value="Bank transfer">
+                    <label for="">Bank transfer</label>
                   </dt>
                   <dt>
-                    <input type="radio" id="payment" name="payment" value="Thanh toán tiền mặt khi nhận hàng">
-                    <label for="">Thanh toán tiền mặt khi nhận hàng</label>
+                    <input type="radio" id="payment" name="payment" value="Cash on delivery">
+                    <label for="">Cash on delivery</label>
                   </dt>
                 </dl>
               </div>
             </div>
             <div class="onestepcheckout-review-info">
               <div class="order-review-info">
-                <h3>Kiểm tra lại đơn hàng</h3>
+                <h3>Review your order</h3>
                 <div class="clear"></div>
                 <table class="data-table">
                   <thead>
                     <tr class="first">
-                      <th>Tên sản phẩm</th>
-                      <th>Số lượng</th>
-                      <th>Thành tiền</th>
+                      <th>Product name</th>
+                      <th>Quantity</th>
+                      <th>Subtotal</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -95,7 +95,7 @@
                 </table>
                 <div class="clear"></div>
                 <div style="text-align: center; margin-bottom: 10px"><a href="javascript:void(0)" class="submit"
-                    onclick="dat_hang();">Xác nhận đơn hàng</a></div>
+                    onclick="dat_hang();">Confirm order</a></div>
               </div>
             </div>
 

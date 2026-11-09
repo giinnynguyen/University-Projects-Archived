@@ -137,7 +137,7 @@ function edit_item(ma) {
   name_row.innerHTML = "<input type='text' id='name_text" + ma + "' value='" + name_data + "'>";
   email_row.innerHTML = "<input type='text' id='email_text" + ma + "' value='" + email_data + "'>";
   pass_row.innerHTML = "<input type='text' id='pass_text" + ma + "' value='" + passAcc(ma) + "'>";
-  type_row.innerHTML = "<select id='type_text" + ma + "'><option>admin</option><option>nhân viên</option></select>";
+  type_row.innerHTML = "<select id='type_text" + ma + "'><option>admin</option><option>staff</option></select>";
 }
 /* end edit*/
 
@@ -274,7 +274,7 @@ function search(displayArr, keyWord) {
 }
 /*search end*/
 
-/**phan trang start **/
+/**pagination start **/
 function pagination() {
   $(".pager").remove();
 
@@ -301,7 +301,7 @@ function pagination() {
     $pager.insertAfter($table).find('span.page-number:first').addClass('active');
   });
 }
-/**phan trang end **/
+/**pagination end **/
 /**import/export start**/
 function download(text, name, type) {
   var a = document.getElementById("a");
@@ -347,7 +347,7 @@ function Import_Product() {
     }
     fileReader.readAsText(fileToLoad, "UTF-8");
   } catch (err) {
-    alert("Import thất bại!Tên file phải là đuôi json");
+    alert("Import failed! The file must have a .json extension");
   }
 
 

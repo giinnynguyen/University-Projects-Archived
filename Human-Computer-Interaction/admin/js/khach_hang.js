@@ -119,10 +119,10 @@ function edit_item(ma_khach_hang) {
   var email_data = email_row.innerHTML;
   var phone = phone_data.replace(/\s/g, '');
   customerName_row.innerHTML = "<input class='customerName' type='text' id='customerName_text" + ma_khach_hang + "' value='" + customerName_data + "' required/>";
-  gender_row.innerHTML = "<select id='gender_text" + ma_khach_hang + "' value='" + gender_data + "'><option>Nam</option><option>Nữ</option></select";
+  gender_row.innerHTML = "<select id='gender_text" + ma_khach_hang + "' value='" + gender_data + "'><option>Male</option><option>Female</option></select";
   birthday_row.innerHTML = "<input type='date' class='birthday' id='birthday_text" + ma_khach_hang + "' value='" + birthday_data + "'>";
   address_row.innerHTML = "<input class='address' type='text' id='address_text" + ma_khach_hang + "' value='" + address_data + "'>";
-  phone_row.innerHTML = "<input type='number' title='số điện thoại gồm 10 hoặc 11 số' class'phone' maxlength='11' class='input-phone' id='phone_text" + ma_khach_hang + "' value='" + phone + "'>";
+  phone_row.innerHTML = "<input type='number' title='phone number must have 10 or 11 digits' class'phone' maxlength='11' class='input-phone' id='phone_text" + ma_khach_hang + "' value='" + phone + "'>";
   email_row.innerHTML = "<input type='text' class='email' id='email_text" + ma_khach_hang + "' value='" + email_data + "'>";
   saveChange();
 }
@@ -222,7 +222,7 @@ function save_item(ma_khach_hang) {
         $("#email_text" + ma_khach_hang).css("border", "1px solid red");
       }
       if (check == true) {
-        alert("Email đã tồn tại");
+        alert("Email already exists");
       }
     }
   } else {
@@ -390,7 +390,7 @@ function search(displayArr, keyWord) {
 }
 /*search end*/
 
-/**phan trang start **/
+/**pagination start **/
 function pagination() {
   $(".pager").remove();
 
@@ -417,7 +417,7 @@ function pagination() {
     $pager.insertAfter($table).find('span.page-number:first').addClass('active');
   });
 }
-/**phan trang end **/
+/**pagination end **/
 
 /** import/export start **/
 function download(text, name, type) {
@@ -464,7 +464,7 @@ function Import_Product() {
     }
     fileReader.readAsText(fileToLoad, "UTF-8");
   } catch (err) {
-    alert("Import thất bại!Tên file phải là đuôi json");
+    alert("Import failed! The file must have a .json extension");
   }
 
 
@@ -472,7 +472,7 @@ function Import_Product() {
 
 /** import/export end **/
 
-/**function khi thay doi select phai*/
+/**function when the gender select changes*/
 function changeSelectCompany() {
   $('#gender').change(function () {
     var selectedOption = $(this).val();
@@ -495,7 +495,7 @@ function sortName(option) {
     arr = khach_hang.sort(compareAZ);
   } else if (option == "Z-A") {
     arr = khach_hang.sort(compareZA);
-  } else if (option == "Ngày sinh") {
+  } else if (option == "Date of birth") {
     arr = khach_hang.sort(abc);
   }
   return arr;
@@ -525,10 +525,10 @@ function abc(a, b) {
   return aDate.getTime() - bDate.getTime();
 }
 
-/**loc theo company*/
+/**filter by company*/
 function filter(option) {
   var arr = [];
-  if (option == "Tất cả") {
+  if (option == "All") {
     arr = khach_hang;
   } else {
     $.each(khach_hang, function () {

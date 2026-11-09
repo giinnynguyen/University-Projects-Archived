@@ -41,15 +41,15 @@ function loadJsonStore(key) {
   return [];
 }
 
-//sản phẩm
+//product
 var product = loadJsonStore("product");
 
 var ct_don_hang = loadJsonStore("ct_don_hang");
-//tài khoản
+//account
 var accounts = loadJsonStore("accounts");
 var khach_hang = loadJsonStore("khach_hang");
 
-//hãng
+//brand
 var company = loadJsonStore("company");
 
 var don_hang = loadJsonStore("don_hang");
@@ -91,7 +91,7 @@ function logoutUser() {
 
   }));
   $(".social").html(" <a href=\"#\"><span class=\"fa fa-facebook\"></span></a><a href=\"#\" ><span class=\"fa fa-user\"></span></a>");
-  $(".social-2").html("<a href=\"login-user.html\"><span>Đăng nhập</span></a><a href=\"sign-up.html\"><span>Đăng ký</span>");
+  $(".social-2").html("<a href=\"login-user.html\"><span>Log in</span></a><a href=\"sign-up.html\"><span>Sign up</span>");
 
 }
 
@@ -149,8 +149,8 @@ Number.prototype.formatMoney = function (c, d, t) {
 
 function display_user_login() {
   if (loginUser.login) {
-    $(".social").html(" <a href=\"#\">Chào bạn!" + loginUser.userName + "</a>");
-    $(".social-2").html("<a href=\"\" onclick='logoutUser()'>Thoát</a>");
+    $(".social").html(" <a href=\"#\">Hello!" + loginUser.userName + "</a>");
+    $(".social-2").html("<a href=\"\" onclick='logoutUser()'>Log out</a>");
 
   }
 }
@@ -202,12 +202,12 @@ function dat_hang() {
     for (var i = 0; i < loginUser.cart.length; i++) {
       them_ct_don_hang(ma_don_hang, loginUser.ma_khach_hang, loginUser.cart[i].count, loginUser.cart[i].price);
     };
-    alert("Đặt hàng thành công! Bạn sẽ nhận được cuộc gọi từ nhân viên của chúng tôi!");
+    alert("Order placed successfully! Our staff will give you a call!");
     loginUser.cart = [];
     window.localStorage.loginUser = encodeURIComponent(JSON.stringify(loginUser));
     window.location = ".";
   } else {
-    alert("Bạn cần đăng nhập để thực hiện chức năng này!");
+    alert("You need to log in to use this feature!");
     window.location = "login-user.html";
   }
 }

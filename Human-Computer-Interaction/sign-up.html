@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Đăng ký</title>
+	<title>Sign up</title>
 	<link rel="icon" type="image/icon" href="img/icon.png">
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/form.css" rel="stylesheet" />
@@ -44,7 +44,7 @@
 						"pass": x[1].value
 					});
 					window.localStorage.khach_hang = encodeURIComponent(JSON.stringify(khach_hang));
-					alert("Đăng ký thành công !");
+					alert("Registration successful!");
 					window.location = "login-user.html";
 					e.preventDefault();
 
@@ -259,11 +259,11 @@
 					</div>
 					<div data-errors-for="email">
 						<small class="email-empty">
-							Email không được để trống. </small>
+							Email must not be empty. </small>
 						<small class="email-exist">
-							Email đã tồn tại </small>
+							Email already exists </small>
 						<small class="email-invalid">
-							Email chưa đúng định dạng. </small>
+							Invalid email format. </small>
 						<small class="email-message">
 						</small>
 					</div>
@@ -274,7 +274,7 @@
 
 				<div class="form-group">
 					<label for="password" class="form-label form-label--required">
-						Mật khẩu <span class="text-muted">(ít nhất 6 kí tự)</span>:
+						Password <span class="text-muted">(at least 6 characters)</span>:
 					</label>
 					<div class="form-addon" data-states-for="password">
 						<div class="form-addon__addon">
@@ -286,24 +286,24 @@
 					</div>
 					<div data-errors-for="password">
 						<small class="pass-invalid">
-							Mật khẩu ít nhất 6 kí tự </small>
+							Password must be at least 6 characters </small>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="" class="form-label form-label--required">
-						Giới tính:
+						Gender:
 					</label>
 					<div class="form-addon" style="padding: 10px 0">
 						<div class="form-addon__addon">
 							<span class="fa fa-venus-mars"></span>
 						</div>
-						<input type="radio" name="gender" class="form-input" checked value="Nam"> Nam
-						<input type="radio" name="gender" class="form-input" value="Nữ"> Nữ
+						<input type="radio" name="gender" class="form-input" checked value="Male"> Male
+						<input type="radio" name="gender" class="form-input" value="Female"> Female
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="" class="form-label form-label--required">
-						Điện thoại :
+						Phone:
 					</label>
 					<div class="form-addon" data-states-for="password">
 						<div class="form-addon__addon">
@@ -312,11 +312,11 @@
 						<input type="text" id="phone" name="phone" class="form-input input-phone">
 					</div>
 					<small class="phone-empty">
-						Điện thoại không được rỗng </small>
+						Phone must not be empty </small>
 				</div>
 				<div class="form-group">
 					<label for="" class="form-label form-label--required">
-						Tên :
+						Name:
 					</label>
 					<div class="form-addon" data-states-for="password">
 						<div class="form-addon__addon">
@@ -325,12 +325,12 @@
 						<input type="text" name="name" id="username" class="form-input">
 					</div>
 					<small class="user-empty">
-						Tên không được để trống </small>
+						Name must not be empty </small>
 				</div>
 
 				<div class="form-group">
 					<label for="" class="form-label form-label--required">
-						Ngày sinh :
+						Date of birth:
 					</label>
 					<div class="form-addon" data-states-for="password">
 						<div class="form-addon__addon">
@@ -339,11 +339,11 @@
 						<input type="date" id="date" name="date" class="form-input" maxlength="11">
 					</div>
 					<small class="date-empty">
-						Ngày sinh không được để trống </small>
+						Date of birth must not be empty </small>
 				</div>
 				<div class="form-group">
 					<label for="" class="form-label form-label--required">
-						Địa chỉ :
+						Address:
 					</label>
 					<div class="form-addon" data-states-for="password">
 						<div class="form-addon__addon">
@@ -352,13 +352,13 @@
 						<input type="text" name="address" class="form-input" id="address">
 					</div>
 					<small class="address-empty">
-						Địa chỉ không được để trống </small>
+						Address must not be empty </small>
 				</div>
 				<div class="form-footer">
 					<div class="forgot-pass">
-						<a href="login-user.html">Đăng nhập</a>
+						<a href="login-user.html">Log in</a>
 					</div>
-					<input type="submit" class="button" id="register" value="Đăng ký">
+					<input type="submit" class="button" id="register" value="Sign up">
 				</div>
 
 			</form>

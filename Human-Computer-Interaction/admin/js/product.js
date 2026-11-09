@@ -3,10 +3,10 @@ if (!login) {
 }
 var editClicked = false;
 
-//hien thi ten hang trong nut select company 
+//show brand name in the company select button 
 function hien_thi_hang() {
     var companySelect = document.getElementById("selectCompany");
-    companySelect.innerHTML = "<select id='selectCompany'>" + "<option>Tất cả</option>" + hangStringOption() + "</select>";
+    companySelect.innerHTML = "<select id='selectCompany'>" + "<option>All</option>" + hangStringOption() + "</select>";
 }
 
 function hien_thi_san_pham(displayArr) {
@@ -23,7 +23,7 @@ function hien_thi_san_pham(displayArr) {
                 var td = document.createElement('td');
                 var detail = document.createElement('button');
                 detail.className = "viewDetail";
-                detail.innerHTML = "Xem chi tiết";
+                detail.innerHTML = "View details";
                 detail.id = "myBtn" + displayArr[i].ma_san_pham;
                 td.appendChild(detail);
                 row.appendChild(td);
@@ -133,16 +133,16 @@ function hien_thi_san_pham(displayArr) {
     /***showDetail end***/
     pagination();
 }
-//end function hien thi san pham
+//end function show products
 
 //show detail start
 function showDetail(ma_san_pham) {
     var modal = document.getElementById('myModal');
     var btn = document.getElementById("myBtn" + ma_san_pham);
     modal.style.display = "block";
-    //neu nut edit duoc click
+    //if the edit button is clicked
     if (editClicked == true) { } else {
-        //neu edit chua duoc bam thi do du lieu tu product detail vao
+        //if edit has not been clicked, fill in data from the product detail
         setDataDetail(ma_san_pham);
     }
     var span = document.getElementsByClassName("close");
@@ -158,7 +158,7 @@ function showDetail(ma_san_pham) {
 }
 /*show detail end*/
 
-/** dua du lieu dua tren ma san pham vao modal detail**/
+/** load data into the detail modal based on product ID**/
 function setDataDetail(ma_san_pham) {
     var table = document.getElementById("tableDetail");
     table.innerHTML = "";
@@ -204,7 +204,7 @@ function delete_item(ma_san_pham) {
 /* function edit*/
 function edit_item(ma_san_pham) {
     editClicked = true;
-    //an nut edit va hien nut save
+    //hide the edit button and show the save button
     document.getElementById("edit_button" + ma_san_pham).style.display = "none";
     document.getElementById("save_button" + ma_san_pham).style.display = "inline-block";
 
@@ -248,18 +248,18 @@ function edit_item(ma_san_pham) {
     var tdSave = document.createElement('td');
     var save = document.createElement('button');
     save.className = "btn btn-success";
-    save.innerHTML = "Cập nhật";
+    save.innerHTML = "Update";
     table.appendChild(rowSave);
     rowSave.appendChild(tdSave);
     tdSave.appendChild(save);
     tdSave.colSpan = "2";
     tdSave.style.textAlign = "center";
-    //su kien click nut cap nhat
+    //update button click event
     var modal = document.getElementById('myModal');
     save.onclick = function () {
         modal.style.display = "none";
     }
-    //su kien click nut save end
+    //save button click event end
     //edit detail end
 
 
@@ -278,7 +278,7 @@ function edit_item(ma_san_pham) {
 /* end edit*/
 
 
-/**xu ly edit hinh anh**/
+/**handle image editing**/
 function previewFile(ma_san_pham) {
     var preview = document.getElementById("imageProduct" + ma_san_pham);
     $('.fa-upload').css("z-index", "-1");
@@ -298,7 +298,7 @@ function previewFile(ma_san_pham) {
     }
     window.localStorage.product = encodeURIComponent(JSON.stringify(product));
 }
-/**end xu ly edit hinh anh **/
+/**end handle image editing **/
 
 /*function save*/
 //save
@@ -321,30 +321,30 @@ function save_item(ma_san_pham) {
     //save detail start
     var cpu_val = document.getElementById("CPU_text" + ma_san_pham).value;
 
-    var bufferMemory_val = document.getElementById("Bộ nhớ đệm_text" + ma_san_pham).value;
+    var bufferMemory_val = document.getElementById("Cache_text" + ma_san_pham).value;
     var ram_val = document.getElementById("RAM_text" + ma_san_pham).value;
-    var hdd_val = document.getElementById("Ổ cứng_text" + ma_san_pham).value;
-    var dvd_val = document.getElementById("Đĩa quang_text" + ma_san_pham).value;
-    var vga_val = document.getElementById("Đồ họa_text" + ma_san_pham).value;
-    var screen_val = document.getElementById("Màn hình_text" + ma_san_pham).value;
-    var audio_val = document.getElementById("Âm thanh_text" + ma_san_pham).value;
+    var hdd_val = document.getElementById("Hard drive_text" + ma_san_pham).value;
+    var dvd_val = document.getElementById("Optical drive_text" + ma_san_pham).value;
+    var vga_val = document.getElementById("Graphics_text" + ma_san_pham).value;
+    var screen_val = document.getElementById("Display_text" + ma_san_pham).value;
+    var audio_val = document.getElementById("Audio_text" + ma_san_pham).value;
     var wifi_val = document.getElementById("WiFi_text" + ma_san_pham).value;
     var lan_val = document.getElementById("LAN_text" + ma_san_pham).value;
     var pin_val = document.getElementById("PIN_text" + ma_san_pham).value;
-    var hdh_val = document.getElementById("Hệ điều hành_text" + ma_san_pham).value;
+    var hdh_val = document.getElementById("Operating system_text" + ma_san_pham).value;
 
     document.getElementById("CPU" + ma_san_pham).innerHTML = cpu_val;
-    document.getElementById("Bộ nhớ đệm" + ma_san_pham).innerHTML = bufferMemory_val;
+    document.getElementById("Cache" + ma_san_pham).innerHTML = bufferMemory_val;
     document.getElementById("RAM" + ma_san_pham).innerHTML = ram_val;
-    document.getElementById("Ổ cứng" + ma_san_pham).innerHTML = hdd_val;
-    document.getElementById("Đĩa quang" + ma_san_pham).innerHTML = dvd_val;
-    document.getElementById("Đồ họa" + ma_san_pham).innerHTML = vga_val;
-    document.getElementById("Màn hình" + ma_san_pham).innerHTML = screen_val;
-    document.getElementById("Âm thanh" + ma_san_pham).innerHTML = audio_val;
+    document.getElementById("Hard drive" + ma_san_pham).innerHTML = hdd_val;
+    document.getElementById("Optical drive" + ma_san_pham).innerHTML = dvd_val;
+    document.getElementById("Graphics" + ma_san_pham).innerHTML = vga_val;
+    document.getElementById("Display" + ma_san_pham).innerHTML = screen_val;
+    document.getElementById("Audio" + ma_san_pham).innerHTML = audio_val;
     document.getElementById("WiFi" + ma_san_pham).innerHTML = wifi_val;
     document.getElementById("LAN" + ma_san_pham).innerHTML = lan_val;
     document.getElementById("PIN" + ma_san_pham).innerHTML = pin_val;
-    document.getElementById("Hệ điều hành" + ma_san_pham).innerHTML = hdh_val;
+    document.getElementById("Operating system" + ma_san_pham).innerHTML = hdh_val;
 
     //save detail end
 
@@ -362,17 +362,17 @@ function save_item(ma_san_pham) {
         "dateCreate": dateCreate_val,
         "detail": {
             "CPU": cpu_val,
-            "Bộ nhớ đệm": bufferMemory_val,
+            "Cache": bufferMemory_val,
             "RAM": ram_val,
-            "Ổ cứng": hdd_val,
-            "Đĩa quang": dvd_val,
-            "Đồ họa": vga_val,
-            "Màn hình": screen_val,
-            "Âm thanh": audio_val,
+            "Hard drive": hdd_val,
+            "Optical drive": dvd_val,
+            "Graphics": vga_val,
+            "Display": screen_val,
+            "Audio": audio_val,
             "WiFi": wifi_val,
             "LAN": lan_val,
             "PIN": pin_val,
-            "Hệ điều hành": hdh_val
+            "Operating system": hdh_val
         }
     };
     for (var i = 0; i < product.length; i++) {
@@ -443,7 +443,7 @@ function add_item() {
 
     var new_sale = form.elements["sale"].value;
     var new_image = form.elements["image"].value;
-    //cau hinh
+    //specifications
     var cpu = form.elements["cpu"].value;
     var buffer = form.elements["bufferMemory"].value;
     var ram = form.elements["ram"].value;
@@ -473,17 +473,17 @@ function add_item() {
         "dateCreate": dateCreate,
         "detail": {
             "CPU": cpu,
-            "Bộ nhớ đệm": buffer,
+            "Cache": buffer,
             "RAM": ram,
-            "Ổ cứng": hdd,
-            "Đĩa quang": dvd,
-            "Đồ họa": vga,
-            "Màn hình": screenA,
-            "Âm thanh": audio,
+            "Hard drive": hdd,
+            "Optical drive": dvd,
+            "Graphics": vga,
+            "Display": screenA,
+            "Audio": audio,
             "WiFi": wifi,
             "LAN": lan,
             "PIN": pin,
-            "Hệ điều hành": hdh
+            "Operating system": hdh
         }
     };
     product.unshift(productObj);
@@ -492,10 +492,10 @@ function add_item() {
 }
 /*end add*/
 
-/**loc theo company*/
+/**filter by company*/
 function filter(option) {
     var arr = [];
-    if (option == "Tất cả") {
+    if (option == "All") {
         arr = product;
     } else {
         $.each(product, function () {
@@ -506,7 +506,7 @@ function filter(option) {
     return arr;
 }
 
-/**function khi thay doi select company*/
+/**function when the company select changes*/
 function changeSelectCompany() {
     $('#selectCompany').change(function () {
         var selectedOption = $(this).val();
@@ -530,7 +530,7 @@ function search(displayArr, keyWord) {
 }
 /*search end*/
 
-/**phan trang start **/
+/**pagination start **/
 function pagination() {
     $(".pager").remove();
 
@@ -557,7 +557,7 @@ function pagination() {
         $pager.insertAfter($table).find('span.page-number:first').addClass('active');
     });
 }
-/**phan trang end **/
+/**pagination end **/
 
 
 /*function search*/
@@ -620,7 +620,7 @@ function Import_Product() {
         }
         fileReader.readAsText(fileToLoad, "UTF-8");
     } catch (err) {
-        alert("Import thất bại!Tên file phải là đuôi json");
+        alert("Import failed! The file must have a .json extension");
     }
 
 

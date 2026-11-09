@@ -9,7 +9,7 @@ $(function () {
 
 }); //jquery  end
 
-//**hien thi san pham start**/
+//**show products start**/
 function hien_thi_san_pham(displayArr) {
     var container = $("#container");
     container.html("");
@@ -24,11 +24,11 @@ function hien_thi_san_pham(displayArr) {
         var box = document.createElement('div');
         box.className = 'col-md-3';
         table.append(box);
-        //tao new product (hinh anh)
+        //create new product (image)
         var new_pr = document.createElement('a');
         new_pr.className = 'new-pr';
         box.append(new_pr);
-        //chen hinh anh product
+        //insert product image
         var image = document.createElement('img');
         image.src = baseUrl + "/imageProduct/" + displayArr[i]["image"];
         new_pr.append(image);
@@ -36,18 +36,18 @@ function hien_thi_san_pham(displayArr) {
         var footer = document.createElement('div');
         footer.className = 'footer';
         box.append(footer);
-        //ten san pham
+        //product name
         var name = document.createElement('p');
         name.innerHTML = displayArr[i]["productName"];
         footer.append(name);
-        //gia goc
+        //original price
         var price = document.createElement('p');
         price.className = 'price';
-        price.innerHTML = "Giá gốc: " + displayArr[i]["price"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VNĐ";
+        price.innerHTML = "Original price: " + displayArr[i]["price"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VND";
         footer.append(price);
         var sale = document.createElement('p');
         sale.className = 'sale-';
-        sale.innerHTML = "Giảm còn: " + displayArr[i]["sale"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VNĐ";
+        sale.innerHTML = "Now only: " + displayArr[i]["sale"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VND";
         footer.append(sale);
         var cart = document.createElement('a');
         var list = document.createElement('a');
@@ -83,11 +83,11 @@ function hien_thi_san_pham(displayArr) {
             var box = document.createElement('div');
             box.className = 'col-md-3';
             table.append(box);
-            //tao new product (hinh anh)
+            //create new product (image)
             var new_pr = document.createElement('a');
             new_pr.className = 'new-pr';
             box.append(new_pr);
-            //chen hinh anh product
+            //insert product image
             var image = document.createElement('img');
             image.src = baseUrl + "/imageProduct/" + displayArr[i + 1]["image"];
             new_pr.append(image);
@@ -95,18 +95,18 @@ function hien_thi_san_pham(displayArr) {
             var footer = document.createElement('div');
             footer.className = 'footer';
             box.append(footer);
-            //ten san pham
+            //product name
             var name = document.createElement('p');
             name.innerHTML = displayArr[i + 1]["productName"];
             footer.append(name);
-            //gia goc
+            //original price
             var price = document.createElement('p');
             price.className = 'price';
-            price.innerHTML = "Giá gốc: " + displayArr[i + 1]["price"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VNĐ";
+            price.innerHTML = "Original price: " + displayArr[i + 1]["price"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VND";
             footer.append(price);
             var sale = document.createElement('p');
             sale.className = 'sale-';
-            sale.innerHTML = "Giảm còn: " + displayArr[i + 1]["sale"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VNĐ";
+            sale.innerHTML = "Now only: " + displayArr[i + 1]["sale"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VND";
             footer.append(sale);
             var cart = document.createElement('a');
             var list = document.createElement('a');
@@ -143,11 +143,11 @@ function hien_thi_san_pham(displayArr) {
             var box = document.createElement('div');
             box.className = 'col-md-3';
             table.append(box);
-            //tao new product (hinh anh)
+            //create new product (image)
             var new_pr = document.createElement('a');
             new_pr.className = 'new-pr';
             box.append(new_pr);
-            //chen hinh anh product
+            //insert product image
             var image = document.createElement('img');
             image.src = baseUrl + "/imageProduct/" + displayArr[i + 2]["image"];
             new_pr.append(image);
@@ -155,19 +155,19 @@ function hien_thi_san_pham(displayArr) {
             var footer = document.createElement('div');
             footer.className = 'footer';
             box.append(footer);
-            //ten san pham
+            //product name
             var name = document.createElement('p');
             name.innerHTML = displayArr[i + 2]["productName"];
 
             footer.append(name);
-            //gia goc
+            //original price
             var price = document.createElement('p');
             price.className = 'price';
-            price.innerHTML = "Giá gốc: " + displayArr[i + 2]["price"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VNĐ";
+            price.innerHTML = "Original price: " + displayArr[i + 2]["price"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VND";
             footer.append(price);
             var sale = document.createElement('p');
             sale.className = 'sale-';
-            sale.innerHTML = "Giảm còn: " + displayArr[i + 2]["sale"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VNĐ";
+            sale.innerHTML = "Now only: " + displayArr[i + 2]["sale"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VND";
             footer.append(sale);
             var cart = document.createElement('a');
             var list = document.createElement('a');
@@ -203,11 +203,11 @@ function hien_thi_san_pham(displayArr) {
             var box = document.createElement('div');
             box.className = 'col-md-3';
             table.append(box);
-            //tao new product (hinh anh)
+            //create new product (image)
             var new_pr = document.createElement('a');
             new_pr.className = 'new-pr';
             box.append(new_pr);
-            //chen hinh anh product
+            //insert product image
             var image = document.createElement('img');
             image.src = baseUrl + "/imageProduct/" + displayArr[i + 3]["image"];
             new_pr.append(image);
@@ -215,18 +215,18 @@ function hien_thi_san_pham(displayArr) {
             var footer = document.createElement('div');
             footer.className = 'footer';
             box.append(footer);
-            //ten san pham
+            //product name
             var name = document.createElement('p');
             name.innerHTML = displayArr[i + 3]["productName"];
             footer.append(name);
-            //gia goc
+            //original price
             var price = document.createElement('p');
             price.className = 'price';
-            price.innerHTML = "Giá gốc: " + displayArr[i + 3]["price"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VNĐ";
+            price.innerHTML = "Original price: " + displayArr[i + 3]["price"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VND";
             footer.append(price);
             var sale = document.createElement('p');
             sale.className = 'sale-';
-            sale.innerHTML = "Giảm còn: " + displayArr[i + 3]["sale"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VNĐ";
+            sale.innerHTML = "Now only: " + displayArr[i + 3]["sale"].toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + "VND";
             footer.append(sale);
             var cart = document.createElement('a');
             var list = document.createElement('a');
@@ -259,10 +259,10 @@ function hien_thi_san_pham(displayArr) {
     }
     pagination();
 }
-//**hien thi san pham end **//
+//**show products end **//
 
 
-/**phan trang start **/
+/**pagination start **/
 function pagination() {
     $(".pager").remove();
     $('.paginated').each(function () {
@@ -332,10 +332,10 @@ function sp_ban_chay(hoa_don_chi_tiet) {
 
 
 
-//hien thi ten hang trong nut select company 
+//show brand name in the company select button 
 function hien_thi_hang() {
     var companySelect = document.getElementById("selectCompany");
-    companySelect.innerHTML = "<select id='selectCompany'>" + "<option>Tất cả</option>" + hangStringOption() + "</select>";
+    companySelect.innerHTML = "<select id='selectCompany'>" + "<option>All</option>" + hangStringOption() + "</select>";
 }
 /*hangStringOption start*/
 /***
@@ -356,10 +356,10 @@ function hangStringOption() {
 
 
 
-/**loc theo company*/
+/**filter by company*/
 function filter(option) {
     var arr = [];
-    if (option == "Tất cả") {
+    if (option == "All") {
         arr = bestProduct;
     } else {
         $.each(bestProduct, function () {
@@ -370,7 +370,7 @@ function filter(option) {
     return arr;
 }
 
-/**function khi thay doi select company*/
+/**function when the company select changes*/
 function changeSelectCompany() {
     $('#selectCompany').change(function () {
         var selectedOption = $(this).val();
@@ -380,30 +380,30 @@ function changeSelectCompany() {
 }
 
 
-/**function khi thay doi select sortByPrice*/
+/**function when the sortByPrice select changes*/
 function changeSelectPrice() {
     $('#sortByPrice').change(function () {
         var selectedOption = $(this).val();
         var arr = [];
-        if (selectedOption.toLowerCase() == "Tăng dần".toLowerCase()) {
+        if (selectedOption.toLowerCase() == "Ascending".toLowerCase()) {
             arr = sortIncrease(bestProduct);
             hien_thi_san_pham(arr);
-        } else if (selectedOption.toLowerCase() == "Giảm dần".toLowerCase()) {
+        } else if (selectedOption.toLowerCase() == "Descending".toLowerCase()) {
             arr = sortDecrease(bestProduct);
             hien_thi_san_pham(arr);
-        } else if (selectedOption.toLowerCase() == "5tr-10tr".toLowerCase()) {
+        } else if (selectedOption.toLowerCase() == "5M-10M".toLowerCase()) {
             arr = filter5_10();
             hien_thi_san_pham(arr);
         }
-        else if (selectedOption.toLowerCase() == "10tr-15tr".toLowerCase()) {
+        else if (selectedOption.toLowerCase() == "10M-15M".toLowerCase()) {
             arr = filter10_15();
             hien_thi_san_pham(arr);
         }
-        else if (selectedOption.toLowerCase() == "15tr-20tr".toLowerCase()) {
+        else if (selectedOption.toLowerCase() == "15M-20M".toLowerCase()) {
             arr = filter15_20();
             hien_thi_san_pham(arr);
         }
-        else if (selectedOption.toLowerCase() == "Trên 20tr".toLowerCase()) {
+        else if (selectedOption.toLowerCase() == "Over 20M".toLowerCase()) {
             arr = filter20();
             hien_thi_san_pham(arr);
         }
@@ -469,11 +469,11 @@ function filter20() {
     });
     return arr;
 }
-//phan tram giam gia
+//discount percentage
 function percentPerSale(arr) {
     var sale = parseInt(arr.sale);
     var price = parseInt(arr.price);
-    var priceSale = price - sale; //so tien giam gia
+    var priceSale = price - sale; //discounted price
     var percent = (priceSale * 100) / price;
     var result = Math.round(percent * 100) / 100;
     return result;

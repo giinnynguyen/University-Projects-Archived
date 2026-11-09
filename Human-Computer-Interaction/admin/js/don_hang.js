@@ -16,11 +16,11 @@ function hien_thi_don_hang(displayArr) {
             if (p == "trang_thai") {
 
                 if (displayArr[i][p] == "0") {
-                    col.textContent = "Chưa xử lý";
+                    col.textContent = "Pending";
                 } else if (displayArr[i][p] == "1") {
-                    col.textContent = "Hoàn Thành";
+                    col.textContent = "Completed";
                 } else {
-                    col.textContent = "Hủy đơn hàng";
+                    col.textContent = "Cancel order";
                 }
             } else if (p == "ma_khach_hang") {
                 var ten_khach_hang = tim_ten_khach_hang_theo_ma_kh(displayArr[i][p]);
@@ -92,7 +92,7 @@ function tim_ten_khach_hang_theo_ma_kh(ma_khach_hang) {
 function showDetail(ma_don_hang) {
     var modal = document.getElementById('myModal');
     modal.style.display = "block";
-    //neu nut edit duoc click
+    //if the edit button is clicked
     setData(ma_don_hang);
     var span = document.getElementsByClassName("close");
     $(".close").click(function () {

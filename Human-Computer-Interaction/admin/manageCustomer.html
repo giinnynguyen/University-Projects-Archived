@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>QL khách hàng</title>
+	<title>Customers</title>
 	<meta charset="utf-8">
 	<link rel="icon" type="image/icon" href="../img/icon.png">
 
@@ -73,22 +73,22 @@
 	<div w3-include-html="include/header.html"></div>
 	<section class="main-content" id="main-content">
 		<div class="content-header">
-			<a data-toggle="modal" href="#form-content" class="btn btn-primary fa fa-plus">&nbsp; Thêm</a> <input
-				placeholder="Tìm kiếm..." id="search">
+			<a data-toggle="modal" href="#form-content" class="btn btn-primary fa fa-plus">&nbsp; Add</a> <input
+				placeholder="Search..." id="search">
 
 			<div class="gender">
-				<span>Phái:</span> <select id="gender" style="margin-bottom: 0">
-					<option>Tất cả</option>
-					<option>Nam</option>
-					<option>Nữ</option>
+				<span>Gender:</span> <select id="gender" style="margin-bottom: 0">
+					<option>All</option>
+					<option>Male</option>
+					<option>Female</option>
 				</select>
 			</div>
 
 			<div class="gender">
-				<span>Sắp xếp:</span> <select id="sort" style="margin-bottom: 0">
+				<span>Sort:</span> <select id="sort" style="margin-bottom: 0">
 					<option>A-Z</option>
 					<option>Z-A</option>
-					<option>Ngày sinh</option>
+					<option>Date of birth</option>
 				</select>
 			</div>
 
@@ -96,8 +96,8 @@
 			<div class="import" style="display: inline-block; float: right;">
 
 				<a id="a"></a> <a class="btn btn-warning" href="javascript:void(0)"
-					onclick="Export_Product()">Export</a> <label for="fileImport" class="btn btn-success">Chọn file để
-					import</label> <input type="file" id="fileImport" title="Chọn tệp json để import"
+					onclick="Export_Product()">Export</a> <label for="fileImport" class="btn btn-success">Choose file to
+					import</label> <input type="file" id="fileImport" title="Choose a JSON file to import"
 					style="display: none"> <a class="btn btn-success" href="javascript:void(0)"
 					onclick="Import_Product()">Import</a>
 			</div>
@@ -107,14 +107,14 @@
 			<table class="paginated" id="table_kh1">
 				<thead>
 					<tr>
-						<th>Mã KH</th>
-						<th>Tên KH</th>
-						<th>Phái</th>
-						<th>Ngày sinh</th>
-						<th>Địa chỉ</th>
-						<th>Điện thoại</th>
+						<th>Customer ID</th>
+						<th>Customer name</th>
+						<th>Gender</th>
+						<th>Date of birth</th>
+						<th>Address</th>
+						<th>Phone</th>
 						<th>Email</th>
-						<th>Mật khẩu</th>
+						<th>Password</th>
 						<th>&nbsp;</th>
 					</tr>
 				</thead>
@@ -130,36 +130,36 @@
 	<div id="form-content" class="modal hide fade in" style="display: none;">
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">×</a>
-			<h3>Khách hàng mới</h3>
+			<h3>New customers</h3>
 		</div>
 		<div>
 			<form class="contact validate-form" id="validate-form" name="form">
 				<fieldset>
 					<div class="modal-body">
 						<ul class="nav nav-list">
-							<li class="nav-header">Tên khách hàng</li>
+							<li class="nav-header">Customer name</li>
 							<li class="input-holder"><input id="name" value="" type="text" name="name" required />
 								<span class="error">&times</span>
 								<span class="check fa fa-check"></span>
 							</li>
 
-							<li style="display: inline-block" class="nav-header">Phái :</li>
-							<li style="display: inline-block"><input type="radio" name="gender" value="Nam" checked>Nam
-								&nbsp; <input type="radio" name="gender" value="Nữ">Nữ</li>
+							<li style="display: inline-block" class="nav-header">Gender:</li>
+							<li style="display: inline-block"><input type="radio" name="gender" value="Male" checked>Male
+								&nbsp; <input type="radio" name="gender" value="Female">Female</li>
 
-							<li class="nav-header">Ngày sinh (dd/mm/yyyy)</li>
+							<li class="nav-header">Date of birth (dd/mm/yyyy)</li>
 							<li class="input-holder"><input id="birthday" type="date" name="birthday">
 								<span class="error">&times</span>
 								<span class="check fa fa-check"></span>
 							</li>
 
-							<li class="nav-header">Địa chỉ</li>
+							<li class="nav-header">Address</li>
 							<li class="input-holder"><input type=text id="address" name="address"><span
 									class=error>&times</span>
 								<span class="check fa fa-check"></span>
 							</li>
 
-							<li class="nav-header">Điện thoại (096 612 3456 hoặc 0123 456 7892)</li>
+							<li class="nav-header">Phone (096 612 3456 or 0123 456 7892)</li>
 							<li class="input-holder"><input class="input-element" type="text" id="phone" name="phone" />
 								<span class=error>&times</span>
 								<span class="check fa fa-check"></span>
@@ -169,7 +169,7 @@
 							<li class="input-holder"><input type="text" id="email" name="email" />
 								<span class=error>&times</span>
 								<span class="check fa fa-check"></span>
-								<small class="email-mess">Email đã tồn tại</small>
+								<small class="email-mess">Email already exists</small>
 							</li>
 
 							<li class="nav-header">Password</li>
@@ -184,8 +184,8 @@
 			</form>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-success submit" id="submit">Thêm</button>
-			<a href="#" class="btn" data-dismiss="modal">Đóng</a>
+			<button class="btn btn-success submit" id="submit">Add</button>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
 		</div>
 	</div>
 

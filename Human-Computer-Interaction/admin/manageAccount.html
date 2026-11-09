@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Quản lý tài khoản</title>
+	<title>Account management</title>
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
@@ -103,14 +103,14 @@
 	<section class="main-content" id="main-content">
 		<div class="content-header">
 			<a data-toggle="modal" href="#form-content" class="btn btn-primary fa fa-plus">&nbsp;
-				Thêm</a>
-			<input placeholder="Tìm kiếm theo tên và email..." id="search">
+				Add</a>
+			<input placeholder="Search by name and email..." id="search">
 			<!-- import/ export start -->
 			<div class="import" style="display: inline-block; float: right;">
 				<a id="a"></a>
 				<a class="btn btn-warning" href="javascript:void(0)" onclick="Export_Product()">Export</a>
-				<label for="fileImport" class="btn btn-success">Chọn file để import</label>
-				<input type="file" id="fileImport" title="Chọn tệp json để import" style="display: none">
+				<label for="fileImport" class="btn btn-success">Choose file to import</label>
+				<input type="file" id="fileImport" title="Choose a JSON file to import" style="display: none">
 				<a class="btn btn-success" href="javascript:void(0)" onclick="Import_Product()">Import</a>
 			</div>
 			<!-- import/ export end -->
@@ -120,13 +120,13 @@
 			<table class="paginated" id="myTable">
 				<thead>
 					<tr>
-						<th>Mã</th>
-						<th>Tên</th>
+						<th>ID</th>
+						<th>Name</th>
 						<th>Email</th>
-						<th>Mật khẩu</th>
-						<th>Loại</th>
-						<th>Trạng thái</th>
-						<th>Ngày đăng ký</th>
+						<th>Password</th>
+						<th>Type</th>
+						<th>Status</th>
+						<th>Registration date</th>
 						<th>&nbsp;
 						</th>
 					</tr>
@@ -146,14 +146,14 @@
 	<div id="form-content" class="modal hide fade in" style="display: none; ">
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">×</a>
-			<h3>Tạo tài khoản</h3>
+			<h3>Create account</h3>
 		</div>
 		<div>
 			<form class="contact" name="form">
 				<fieldset>
 					<div class="modal-body">
 						<ul class="nav nav-list">
-							<li class="nav-header">Tên user</li>
+							<li class="nav-header">Username</li>
 							<li class="input-holder"><input class="input-xlarge" value="" type="text" name="name" /
 									id="name">
 								<span class="error">&times</span>
@@ -170,14 +170,14 @@
 								<input type="text" name="email" id="email">
 								<span class="error">&times</span>
 								<span class="check fa fa-check"></span>
-								<small class="email-mess">Email đã tồn tại</small>
+								<small class="email-mess">Email already exists</small>
 							</li>
 
-							<li class="nav-header">Loại tài khoản</li>
+							<li class="nav-header">Account type</li>
 							<li>
 								<select name="type" id="type">
 									<option>admin</option>
-									<option>nhân viên</option>
+									<option>staff</option>
 								</select>
 							</li>
 					</div>
@@ -185,8 +185,8 @@
 			</form>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-success" id="submit">Thêm</button>
-			<a href="#" class="btn" data-dismiss="modal">Đóng</a>
+			<button class="btn btn-success" id="submit">Add</button>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
 		</div>
 	</div>
 	<!--add end-->

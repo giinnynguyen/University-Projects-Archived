@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Người Chăn Cừu - Game tìm đường đi ngắn nhất bằng thuật toán A*. Thu thập hạt đậu thần trước bầy sói!">
+    <title>Người Chăn Cừu - A* Pathfinding Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <div class="start-container">
+            <div class="game-title">
+                <span class="title-icon">🐑</span>
+                <h1>Người Chăn Cừu</h1>
+                <p class="subtitle">Thuật toán tìm đường A* &mdash; AI Pathfinding Game</p>
+            </div>
+            <div class="map-selector">
+                <h2>Chọn Bản Đồ</h2>
+                <div class="map-grid">
+                    <button class="map-btn selected" data-map="map7">Map 1 <span>19×19</span></button>
+                    <button class="map-btn" data-map="map1">Map 2 <span>15×15</span></button>
+                    <button class="map-btn" data-map="map2">Map 3 <span>15×15</span></button>
+                    <button class="map-btn" data-map="map3">Map 4 <span>15×15</span></button>
+                    <button class="map-btn" data-map="map4">Map 5 <span>15×15</span></button>
+                    <button class="map-btn" data-map="map5">Map 6 <span>15×15</span></button>
+                </div>
+            </div>
+            <button id="start-btn" class="glow-btn">
+                <span>🎮 Bắt Đầu Chơi</span>
+            </button>
+            <div class="controls-info">
+                <div class="key-group">
+                    <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>
+                    <span class="or">hoặc</span>
+                    <span class="key">↑</span><span class="key">←</span><span class="key">↓</span><span class="key">→</span>
+                </div>
+                <p>Di chuyển nhân vật</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="hidden">
+        <div id="game-wrapper">
+            <div class="canvas-3d-wrapper">
+                <canvas id="game-canvas"></canvas>
+            </div>
+            <div id="sidebar">
+                <div class="sidebar-section logo-section">
+                    <img src="Angle.png" alt="Logo" class="logo-img" id="logo-img">
+                </div>
+                <div class="sidebar-section score-section" id="score-panel">
+                    <div class="score-board-bg">
+                        <div class="character-previews">
+                            <div class="char-preview player-preview">
+                                <canvas id="player-avatar" width="64" height="64"></canvas>
+                                <span class="char-name">Người chơi</span>
+                            </div>
+                            <div class="vs-badge">VS</div>
+                            <div class="char-preview enemy-preview">
+                                <canvas id="enemy-avatar" width="64" height="64"></canvas>
+                                <span class="char-name">Bầy sói</span>
+                            </div>
+                        </div>
+                        <h3>Bảng Điểm</h3>
+                        <div class="score-row player-score">
+                            <canvas id="score-player-sprite" class="score-sprite" width="32" height="32"></canvas>
+                            <span class="score-label">Điểm Ta:</span>
+                            <span class="score-value" id="score-ally">0</span>
+                        </div>
+                        <div class="score-row enemy-score">
+                            <canvas id="score-enemy-sprite" class="score-sprite" width="32" height="32"></canvas>
+                            <span class="score-label">Điểm Máy:</span>
+                            <span class="score-value" id="score-enemy">0</span>
+                        </div>
+                        <div class="score-bar-container">
+                            <div class="score-bar player-bar" id="player-bar" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-section info-section">
+                    <div class="info-item">
+                        <span class="info-label">🎯 Mục tiêu:</span>
+                        <span class="info-value" id="target-status">Đang xuất hiện...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">🐑 Đồng minh:</span>
+                        <span class="info-value" id="ally-count">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">👻 Sói:</span>
+                        <span class="info-value" id="enemy-count">1</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">⏱️ Thời gian:</span>
+                        <span class="info-value" id="game-time">0s</span>
+                    </div>
+                </div>
+                <div class="sidebar-section controls-section">
+                    <h4>Điều khiển</h4>
+                    <div class="mini-keys">
+                        <div class="key-row"><span class="key-mini">W/↑</span></div>
+                        <div class="key-row">
+                            <span class="key-mini">A/←</span>
+                            <span class="key-mini">S/↓</span>
+                            <span class="key-mini">D/→</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="quit-btn" class="quit-btn">✖ Thoát</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Win/Lose Modal -->
+    <div id="modal-overlay" class="hidden">
+        <div id="game-modal">
+            <div class="modal-icon" id="modal-icon">🏆</div>
+            <h2 id="modal-title">Bạn đã thắng!</h2>
+            <p id="modal-message">Chúc mừng! Bạn đã thu thập đủ 12 hạt đậu thần.</p>
+            <div class="modal-stats">
+                <div class="stat"><span class="stat-label">Điểm Ta</span><span class="stat-value" id="modal-score-ally">0</span></div>
+                <div class="stat"><span class="stat-label">Điểm Máy</span><span class="stat-value" id="modal-score-enemy">0</span></div>
+                <div class="stat"><span class="stat-label">Thời gian</span><span class="stat-value" id="modal-time">0s</span></div>
+            </div>
+            <div class="modal-buttons">
+                <button id="replay-btn" class="glow-btn"><span>🔄 Chơi Lại</span></button>
+                <button id="menu-btn" class="outline-btn">📋 Menu Chính</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

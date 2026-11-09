@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>QL đơn hàng</title>
+	<title>Orders</title>
 	<meta charset="utf-8">
 	<link rel="icon" type="image/icon" href="../img/icon.png">
 
@@ -87,7 +87,7 @@
 	<section class="main-content" id="main-content">
 		<div class="content-header">
 
-			<input placeholder="Tìm kiếm..." id="search" style="visibility: hidden;">
+			<input placeholder="Search..." id="search" style="visibility: hidden;">
 
 
 
@@ -97,14 +97,14 @@
 			<table class="paginated" id="table_kh1">
 				<thead>
 					<tr>
-						<th>Mã đơn hàng</th>
-						<th>Ngày đặt hàng</th>
-						<th>Khách hàng</th>
-						<th>Trị giá (VNĐ)</th>
-						<th>Hình thức thanh toán</th>
-						<th>Ghi chú</th>
-						<th>Trạng thái</th>
-						<th>Thao tác</th>
+						<th>Order ID</th>
+						<th>Order date</th>
+						<th>Customers</th>
+						<th>Value (VND)</th>
+						<th>Payment method</th>
+						<th>Notes</th>
+						<th>Status</th>
+						<th>Actions</th>
 					</tr>
 				</thead>
 				<tbody id="product">
@@ -119,35 +119,35 @@
 	<div id="form-content" class="modal hide fade in" style="display: none;">
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">×</a>
-			<h3>Khách hàng mới</h3>
+			<h3>New customers</h3>
 		</div>
 		<div>
 			<form class="contact validate-form" id="validate-form" name="form">
 				<fieldset>
 					<div class="modal-body">
 						<ul class="nav nav-list">
-							<li class="nav-header">Tên khách hàng</li>
+							<li class="nav-header">Customer name</li>
 							<li class="input-holder"><input class="validate" validateType="name" value="" type="text"
 									name="name" required />
 								<span class="error">&times</span>
 							</li>
 
-							<li style="display: inline-block" class="nav-header">Phái :</li>
-							<li style="display: inline-block"><input type="radio" name="gender" value="Nam" checked>Nam
-								&nbsp; <input type="radio" name="gender" value="Nữ">Nữ</li>
+							<li style="display: inline-block" class="nav-header">Gender:</li>
+							<li style="display: inline-block"><input type="radio" name="gender" value="Male" checked>Male
+								&nbsp; <input type="radio" name="gender" value="Female">Female</li>
 
-							<li class="nav-header">Ngày sinh (dd/mm/yyyy)</li>
+							<li class="nav-header">Date of birth (dd/mm/yyyy)</li>
 							<li class="input-holder"><input validateType="date" class="validate input-date" type="text"
 									name="birthday">
 								<span class="error">&times</span>
 							</li>
 
-							<li class="nav-header">Địa chỉ</li>
+							<li class="nav-header">Address</li>
 							<li class="input-holder"><input type=text validateType="address" class="validate"
 									name="address"><span class=error>&times</span>
 							</li>
 
-							<li class="nav-header">Điện thoại (096 612 3456 hoặc 0123 456 7892)</li>
+							<li class="nav-header">Phone (096 612 3456 or 0123 456 7892)</li>
 							<li class="input-holder"><input validateType="phone" class="input-element validate" value=""
 									type="text" name="phone" />
 								<span class=error>&times</span>
@@ -165,8 +165,8 @@
 			</form>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-success submit" id="submit">Thêm</button>
-			<a href="#" class="btn" data-dismiss="modal">Đóng</a>
+			<button class="btn btn-success submit" id="submit">Add</button>
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
 		</div>
 	</div>
 
@@ -174,14 +174,14 @@
 
 		<div class="modal-content">
 			<span class="close">&times;</span>
-			<h1 id="h1">Chi tiết đơn hàng</h1>
+			<h1 id="h1">Order details</h1>
 			<table class="abc">
 				<thead>
 					<tr>
 						<th>STT</th>
-						<th>Tên sản phẩmm</th>
-						<th>số lượng</th>
-						<th>Ðõn giá</th>
+						<th>Product name</th>
+						<th>quantity</th>
+						<th>Unit price</th>
 					</tr>
 				</thead>
 				<tbody id="ctdh">

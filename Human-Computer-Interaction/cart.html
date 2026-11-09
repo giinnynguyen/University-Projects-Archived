@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Giỏ hàng</title>
+  <title>Cart</title>
   <link rel="icon" type="image/icon" href="img/icon.png">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -106,17 +106,17 @@
   <div class="body-page" id="body" style="margin-bottom: 50px">
     <div class="container">
       <hr>
-      <h3>Giỏ hàng của tôi</h3>
+      <h3>My cart</h3>
       <div class="datagrid">
         <table>
           <thead>
             <tr>
-              <th>Hình ảnh</th>
-              <th>Tên sản phẩm</th>
-              <th>Giá (VNĐ)</th>
-              <th>Số lượng</th>
-              <th>Thành tiền (VNĐ)</th>
-              <th>Xóa</th>
+              <th>Image</th>
+              <th>Product name</th>
+              <th>Price (VND)</th>
+              <th>Quantity</th>
+              <th>Subtotal (VND)</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -126,15 +126,15 @@
           <tfoot>
             <tr>
               <td colspan="2">
-                <span>Tổng tiền: <b class="sum"></b> <b>VND</b></span>
+                <span>Total: <b class="sum"></b> <b>VND</b></span>
               </td>
               <td colspan="4">
                 <ul>
-                  <li><a href="."><span>Chọn thêm</span></a></li>
+                  <li><a href=".."><span>Add more</span></a></li>
                   <li><a href="javascript:void(0)"
-                      onclick="loginUser.cart=[];localStorage.loginUser = encodeURIComponent(JSON.stringify(loginUser));window.location.reload();"><span>Xóa
-                        hết giỏ hàng</span></a></li>
-                  <li><a href="thanhtoan.html"><span>Thanh toán</span></a></li>
+                      onclick="loginUser.cart=[];localStorage.loginUser = encodeURIComponent(JSON.stringify(loginUser));window.location.reload();"><span>Clear
+                        cart</span></a></li>
+                  <li><a href="thanhtoan.html"><span>Checkout</span></a></li>
                 </ul>
               </td>
             </tr>

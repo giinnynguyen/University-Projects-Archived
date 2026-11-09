@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Đăng nhập</title>
+	<title>Log in</title>
 	<link rel="icon" type="image/icon" href="img/icon.png">
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/form.css" rel="stylesheet" />
@@ -30,7 +30,7 @@
 							localStorage.loginUser = encodeURIComponent(JSON.stringify(loginUser));
 							window.location = "index.html";
 						} else {
-							alert("Tên đăng nhập hoặc mật khẩu sai");
+							alert("Incorrect username or password");
 							break;
 						}
 					}
@@ -58,13 +58,13 @@
 						<div class="form-addon__addon">
 							<span class="fa fa-user"></span>
 						</div>
-						<input type="text" id="username" name="username" class="form-input" placeholder="Tài khoản"
+						<input type="text" id="username" name="username" class="form-input" placeholder="Account"
 							required> <span class="form-addon__icon icon-valid"></span> <span
 							class="form-addon__icon icon-invalid"></span>
 					</div>
 					<div data-errors-for="email">
 						<small class="user-empty">
-							Tài khoản không được để trống. </small>
+							Username must not be empty. </small>
 						<small class="user-message">
 						</small>
 					</div>
@@ -73,7 +73,7 @@
 
 				<div class="form-group">
 					<label for="password" class="form-label form-label--required">
-						Mật khẩu :
+						Password:
 					</label>
 					<div class="form-addon" data-states-for="password">
 						<div class="form-addon__addon">
@@ -85,7 +85,7 @@
 					</div>
 					<div data-errors-for="password">
 						<small class="pass-invalid">
-							Mật khẩu ít nhất 6 kí tự </small>
+							Password must be at least 6 characters </small>
 					</div>
 				</div>
 
@@ -97,10 +97,10 @@
 
 				<div class="form-footer">
 					<div class="forgot-pass">
-						<a href="#">Quên mật khẩu</a>
-						<a href="sign-up.html">Đăng ký</a>
+						<a href="#">Forgot password</a>
+						<a href="sign-up.html">Sign up</a>
 					</div>
-					<button class="button" type="submit" id="login">Đăng nhập</button>
+					<button class="button" type="submit" id="login">Log in</button>
 				</div>
 
 			</form>

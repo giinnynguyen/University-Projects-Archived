@@ -2,9 +2,9 @@
     {
         "ma_khach_hang": "1",
         "ten_khach_hang": "Trương Tam Lang",
-        "phai": "Nam",
+        "phai": "Male",
         "ngay_sinh": "04\/05\/1996",
-        "dia_chi": "thủ đức",
+        "dia_chi": "Thu Duc",
         "dien_thoai": "0164 222 2992",
         "email": "",
         "pass": "123"
@@ -12,9 +12,9 @@
     {
         "ma_khach_hang": "2",
         "ten_khach_hang": "Trần Văn Thắng",
-        "phai": "Nam",
+        "phai": "Male",
         "ngay_sinh": "16\/02\/1996",
-        "dia_chi": "thủ đức",
+        "dia_chi": "Thu Duc",
         "dien_thoai": "0164 222 2992",
         "email": "vanthang@gmail.com",
         "pass": "123"
@@ -22,9 +22,9 @@
     {
         "ma_khach_hang": "3",
         "ten_khach_hang": "Nguyễn Hoài Phụng",
-        "phai": "Nam",
+        "phai": "Male",
         "ngay_sinh": "20\/10\/1996",
-        "dia_chi": "thủ đức",
+        "dia_chi": "Thu Duc",
         "dien_thoai": "0966 368 642",
         "email": "tieuphung2205@gmail.com",
         "pass": "123"
@@ -32,9 +32,9 @@
     {
         "ma_khach_hang": "4",
         "ten_khach_hang": "Hồ Lâm Lai",
-        "phai": "Nam",
+        "phai": "Male",
         "ngay_sinh": "10\/12\/1996",
-        "dia_chi": "thủ đức",
+        "dia_chi": "Thu Duc",
         "dien_thoai": "0164 222 2992",
         "email": "laiit@gmail.com",
         "pass": "123"
@@ -42,9 +42,9 @@
     {
         "ma_khach_hang": "5",
         "ten_khach_hang": "Hoài Phụng",
-        "phai": "Nữ",
+        "phai": "Female",
         "ngay_sinh": "07\/04\/1995",
-        "dia_chi": "thủ đức",
+        "dia_chi": "Thu Duc",
         "dien_thoai": "0164 222 2992",
         "email": "test",
         "pass": "123"

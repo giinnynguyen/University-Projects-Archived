@@ -73,13 +73,13 @@
 			};
 			function write_table(data, labels) {
 				var table = document.getElementById('table');
-				var kq = "<table><caption>Bảng thống kê</caption>";
+				var kq = "<table><caption>Statistics</caption>";
 				var sum = 0;
 				for (var i = 0; i < data.length; i++) {
-					kq += "<tr><td>" + labels[i] + ":</td><td>" + (data[i]).format() + " đ</td></tr>";
+					kq += "<tr><td>" + labels[i] + ":</td><td>" + (data[i]).format() + " VND</td></tr>";
 					sum += data[i];
 				}
-				kq += "<tr><td>Tổng :</td><td>" + (sum).format() + " đ</td></tr>";
+				kq += "<tr><td>Total:</td><td>" + (sum).format() + " VND</td></tr>";
 				kq += "</table>";
 				table.innerHTML = kq;
 			}
@@ -103,27 +103,27 @@
 				switch (data) {
 					case 0: {
 						var labelStringX = '';
-						var labelStringY = 'Tiền bán sản phẩm bán ';
-						var title = 'Doanh thu  tháng ' + n[1] + " (" + n[2] + ")";
+						var labelStringY = 'Product sales revenue ';
+						var title = 'Revenue for month ' + n[1] + " (" + n[2] + ")";
 						var data = random_data(4);
-						var labels = ["Tuần 1", "Tuần 2", "Tuần 3", "Tuần 4"];
+						var labels = ["Week 1", "Week 2", "Week 3", "Week 4"];
 
 						break;
 					}
 					case 1: {
 						var labelStringX = '';
-						var labelStringY = 'Tiền bán sản phẩm bán ';
-						var title = 'Doanh thu năm ' + n[2];
+						var labelStringY = 'Product sales revenue ';
+						var title = 'Revenue for year ' + n[2];
 						var data = random_data(12);
-						var labels = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
+						var labels = ["Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6", "Month 7", "Month 8", "Month 9", "Month 10", "Month 11", "Month 12"];
 						break;
 					}
 					case 2: {
 						var labelStringX = '';
-						var labelStringY = 'Tiền bán sản phẩm bán ';
-						var title = "Doanh thu tuần " + parseInt((time.getDate() / 7) + 1) + " tháng " + n[1] + " năm" + " " + n[2];
+						var labelStringY = 'Product sales revenue ';
+						var title = "Revenue for week " + parseInt((time.getDate() / 7) + 1) + " month " + n[1] + " year" + " " + n[2];
 						var data = random_data(7);
-						var labels = ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ Nhật"];
+						var labels = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 						break;
 					}
 					default: {
@@ -139,8 +139,8 @@
 
 							if ((f[2] < t[2]) || (m > 0 && f[2] == t[2])) {
 								var labelStringX = '';
-								var labelStringY = 'Tiền bán sản phẩm bán ';
-								var title = 'Doanh thu tháng ' + f[1] + "(" + f[2] + ")" + " đến " + t[1] + "(" + t[2] + ")";
+								var labelStringY = 'Product sales revenue ';
+								var title = 'Revenue for month ' + f[1] + "(" + f[2] + ")" + " to " + t[1] + "(" + t[2] + ")";
 								var data = [];
 								var labels = [];
 								f_key = parseInt(f[2]);
@@ -152,7 +152,7 @@
 								do {
 
 									data.push(parseInt(Math.random() * 1000000));
-									labels.push("Tháng " + (i == 0 ? 12 : i));
+									labels.push("Month " + (i == 0 ? 12 : i));
 									if (i == 0) {
 										f_key += 1;
 									}
@@ -164,16 +164,16 @@
 								console.log(data);
 							} else if (m == 0 && f[2] == t[2]) {
 								var labelStringX = '';
-								var labelStringY = 'Tiền bán sản phẩm bán ';
-								var title = 'Doanh thu  tháng ' + t[1] + " (" + t[2] + ")";
+								var labelStringY = 'Product sales revenue ';
+								var title = 'Revenue for month ' + t[1] + " (" + t[2] + ")";
 								var data = random_data(4);
-								var labels = ["Tuần 1", "Tuần 2", "Tuần 3", "Tuần 4"];
+								var labels = ["Week 1", "Week 2", "Week 3", "Week 4"];
 							} else {
-								alert("Vui lòng nhập đầy đủ thông tin!");
+								alert("Please fill in all the information!");
 								return;
 							}
 						} else {
-							alert("Vui lòng nhập đầy đủ thông tin!");
+							alert("Please fill in all the information!");
 							return;
 						}
 					}
@@ -262,7 +262,7 @@
 									var datasetLabel = data.datasets[tooltipItem.datasetIndex].label || 'Other';
 									var label = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
 									//console.log(data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + "-" + label);
-									return datasetLabel + ': ' + label.toLocaleString() + " đ";
+									return datasetLabel + ': ' + label.toLocaleString() + " VND";
 								}
 							}
 						}
@@ -274,14 +274,14 @@
 		<div class="content">
 			<div class="content-left">
 				<input type="date" id="time">
-				<button onclick="lay_du_lieu(2)">Xem theo tuần</button>
-				<button onclick="lay_du_lieu(0)">Xem theo tháng</button>
-				<button onclick="lay_du_lieu(1)">Xem theo năm</button>
+				<button onclick="lay_du_lieu(2)">View by week</button>
+				<button onclick="lay_du_lieu(0)">View by month</button>
+				<button onclick="lay_du_lieu(1)">View by year</button>
 			</div>
 			<div class="content-right">
 
-				Từ <input type="date" id="time-from"> đến <input type="date" id="time-to">
-				<button onclick="lay_du_lieu(3)">Xem theo thời gian</button>
+				From <input type="date" id="time-from"> to <input type="date" id="time-to">
+				<button onclick="lay_du_lieu(3)">View by date range</button>
 			</div>
 			<div class="clear"></div>
 			<div class="content-bottom" id="table">
