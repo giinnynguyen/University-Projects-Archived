@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_layout.cshtml";
+}
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Tên bài hát</th>
+                                <th>ID</th>
+                                <th>FileName</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.Files)
+                            {
+                                <tr>
+                                    <td>
+                                        <audio controls>
+                                            <source src="@item.WebContentLink" type="audio/ogg">
+                                        </audio>
+                                    </td>
+                                    <td>@item.Description</td>
+                                    <td>@item.Id</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.MimeType</td>
+                                    <td>
+                                        <a href="@Url.Action("Update", "Admin", new { id = @item.Id})" class="btn btn-info">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                        <a href="@Url.Action("Delete", "Admin", new { id = @item.Id})" class="btn btn-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Rendering engine</th>
+                                <th>Browser</th>
+                                <th>Platform(s)</th>
+                                <th>Engine version</th>
+                                <th>CSS grade</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
+<script>
+    $(document).ready(function () {
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
+        });
+    });
+</script>

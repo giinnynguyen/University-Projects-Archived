@@ -1,0 +1,433 @@
+﻿@model HPMusic.Models.PlayModel
+@using HPMusic.Models
+@using HPMusic.Framework
+@{
+    ViewBag.Title = "Play";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles {
+    <link href="@Url.Content("/Assets/client/css/audio.css")" rel="stylesheet" type="text/css" />
+<meta property="og:title" content="The Rock" />
+<meta property="og:type" content="movie" />
+<meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+<meta property="og:image" content="http://ia.media-imdb.com/rock.jpg" />
+<meta property="og:site_name" content="IMDb" />
+<meta property="fb:admins" content="R" />
+<meta property="og:description"
+      content="Rin" />
+}
+
+
+<div class="alert-login" style="display: none">
+    <div class="notify success">
+        <a href="#" class="icon fa fa-times-circle"></a>
+        <div class="text">Bạn phải đăng nhập để sử dụng chức năng này!</div>
+    </div>
+</div>
+
+<div class="content">
+    <!-- left start	 -->
+    <div class="ct-left">
+        <div class="view">
+            <div class="view-title">
+                <h1>@Html.DisplayFor(model => model.SongFromID.song_name)</h1>
+            </div>
+            <div class="view-box">
+                <div class="view-info flx">
+                    <ul class="left mb15">
+                        <li class="view-row">
+                            <em>Ca sĩ gốc:&nbsp;</em>
+                            @if (Model.SongFromID.singer != "default")
+                            {
+                                <span>@Html.DisplayFor(model => model.SongFromID.singer)</span>
+                            }
+                        </li>
+                        <li>
+                            <em>Loại:&nbsp;</em>
+                            @if (Model.SongFromID.type == 0)
+                            {
+                                <span>Nguyên tác</span>
+                            }
+                            else if (Model.SongFromID.type == 1)
+                            {
+                                <span>Cover</span>
+                            }
+                            else
+                            {
+                                <span>Nhạc cụ</span>
+                            }
+                        </li>
+                        <li><em>Thể hiện:&nbsp;</em><span>@Html.ActionLink(@SongDAO.DisplayUsernameFromUserID(Model.SongFromID.user_id) ?? "-", "User", "User", new { id = Model.SongFromID.user_id }, new { @class = "singer" })</span></li>
+                        <li class="view-row">
+                            <em>Thể loại:&nbsp;</em>
+                            <span>
+                                @foreach (string item in Model.GenreOfSong)
+                                {
+                                    <span>@GenreDAO.DisplayGenreName(item) &nbsp; </span>
+                                }
+                            </span>
+
+
+                        </li>
+                        <li><em>Ngôn ngữ:&nbsp;</em><span>@SongDAO.DisplayLanguageName(Model.SongFromID.language_id)</span></li>
+                        <li class="view-row"><em>Ngày tải:&nbsp;</em><span>@Html.DisplayFor(model => model.SongFromID.uploaded)</span></li>
+                    </ul>
+                </div>
+                <div class="view-action flx">
+                    <div class="view-action-left left">
+                        <ul>
+                            <li><a href="@Url.Action("Download", "Play", new { id = Model.SongFromID.song_id })"><span class="fa fa-download">&nbsp;</span>Tải về</a></li>
+                            <li><a href="javascript: void(0);" data-layout="button" onclick="window.open('https://www.facebook.com/sharer.php?u=@HttpContext.Current.Request.Url.AbsoluteUri&summary=HPmusic&title=@Model.SongFromID.song_name&description=@Model.SongFromID.linkID&picture=http://imageshack.com/a/img922/6163/GLTMPm.png','ventanacompartir', 'toolbar=0, status=0, width=650, height=450, top=80, left=300');"><span class="fa fa-facebook-square">&nbsp;</span>Chia sẻ</a></li>
+                          
+                            <!--
+                              <li><a href="" target="_blank"><span class="fa fa-flag">&nbsp;</span>Phản hồi</a></li>
+                                -->
+                        </ul>
+                    </div>
+                    <div class="view-action-right right">
+                        <ul>
+                            <!--
+                            <li><a href="#"><span class="fa fa-heart">&nbsp;</span>1358</a></li>
+                                -->
+                            <li> <a href="javascript:void(0)"><span class="fa fa-cloud-download">&nbsp;</span>@Html.DisplayFor(model => model.SongFromID.download)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- phan lyric start -->
+        <div class="lyric-box">
+            <div class="lyric-title">
+                <span class="lyric-bar"></span>
+                <ul>
+                    <li><h2><a href="javascript:void(0)" class="tab-link current" data-tab="tab-1">Mô tả</a></h2></li>
+                    <li><h2><a href="javascript:void(0)" class="tab-link" data-tab="tab-2">Lời bài hát</a></h2></li>
+                </ul>
+            </div>
+            <div class="lyric-tabcontent">
+                <div class="descript tab-content current" id="tab-1">
+                    <pre>  @Html.DisplayFor(model => model.SongFromID.description)</pre>
+                </div>
+                <div class="lyric tab-content" id="tab-2">
+                    <pre> @Html.DisplayFor(model => model.SongFromID.lyric)</pre>
+                </div>
+            </div>
+        </div>
+        <!-- phan lyric end -->
+        <!-- phan commnet start -->
+        <div class="comment-box">
+            <div class="cmt-title">
+                <h2>Bình luận</h2>
+            </div>
+            <div class="cmt-box">
+                <!-- chen comment plugin jquery -->
+            </div>
+        </div>
+        <!-- phan commnet end -->
+    </div>
+    <!-- left end -->
+    <!-- right start -->
+    <div class="ct-right">
+        <!-- user info start -->
+        <div class="user-info-box">
+            <div class="user-avt">
+                <a href="@Url.Action("User","User",new { id = Model.SongFromID.user_id})"><img src="@SongDAO.avatar(Model.SongFromID.user_id)" alt=""></a>
+            </div>
+            <h3 class="user-name">
+                @Html.ActionLink(@SongDAO.DisplayUsernameFromUserID(Model.SongFromID.user_id) ?? "-", "User", "User", new { @id = Model.SongFromID.user_id }, new { })
+            </h3>
+            <div class="user-fans">
+                @{
+                    List<int> listFollower = UserDAO.numFollower(Model.SongFromID.user_id);
+                    var numberFollow = listFollower.Count;
+                }
+                <i class="fa fa-user-o">&nbsp;&nbsp;</i><span> @numberFollow người theo dõi</span>
+            </div>
+            @{ user userLogin = Session["UserLogin"] as user;}
+            @if (userLogin != null)
+            {
+                <div class="btn-follow">
+                    @if (Model.SongFromID.user_id == userLogin.user_id)
+                    {
+                    }
+                    else
+                    {
+                        <a href="javascript:void(0)" id="follow">
+
+                            @if (UserDAO.CheckFollow(Model.SongFromID.user_id, userLogin.user_id))
+                    {
+                                <span>Đang theo dõi</span>
+                            }
+                            else
+                            {
+                                <span>Theo dõi</span>
+                            }
+
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+        <script>
+            $(function () {
+                //follow, unfollow
+                $("#follow").click(function () {
+                    $.ajax({
+                        url: '/User/Follow',
+                        dataType: "json",
+                        type: "GET",
+                        contentType: 'application/json; charset=utf-8',
+                        data: {userid: @Model.SongFromID.user_id},
+                        success: function (data) {
+                            if (data == "nologin") {
+                                $(".alert-login").show();
+                                setTimeout(hideAlert,2000);
+                            } else if(data == "Following") {
+                                $("#follow").text("Theo dõi");
+                            }else{
+                                $("#follow").text("Đang theo dõi");
+                            }
+                        },
+                        error: function (xhr) {
+                            alert('error');
+                        }
+                    });
+
+                    function hideAlert(){
+                        $(".alert-login").hide();
+                    }
+                });
+            });
+        </script>
+       
+        <!-- user info end -->
+        <!-- player control start -->
+        <div class="player-control">
+            <div class="top-play">
+                @{
+                    Google.Apis.Drive.v2.Data.File file = GoogleDriveApi.printFile(ServiceApi.GetService(), Model.SongFromID.song_id);
+                }
+                <audio id="songAudio">
+                    <source src="@file.WebContentLink" type="audio/mpeg">
+                    Trình duyệt của bạn không hỗ trợ audio
+                </audio>
+                <button class="play-btn" id="play-btn"></button>
+                <button class="pause-btn"></button>
+                <h5 class="song-title">@Html.DisplayFor(model => model.SongFromID.song_name)</h5>
+            </div>
+
+            <div class="middle">
+                <div class="play-progressbar">
+                    <div class="played-progressbar"></div>
+                    <div class="played-progressbar-buffered" style="width: 100%"></div>
+                    <div class="played-progressbar-drag"></div>
+                </div>
+            </div>
+            <div class="time-play">
+                <span class="left time-left">0:00</span>
+                <span class="right time-right">4:37</span>
+            </div>
+            <div class="bottom clearfix">
+                <button class="single-mode">
+                    <span class="single-mode-icon"></span>
+                    Chơi 1 bài
+                </button>
+                <button class="playlist-mode">
+                    <span class="playlist-mode-icon"></span>
+                    Playlist
+                </button>
+
+                <div class="volumn-bar">
+                    <span class="volumn-icon fa fa-volume-up"></span>
+                    <span class="volumn-icon fa fa-volume-off"></span>
+                    <div class="volumn-total">
+                        <div class="volumn-loading" style="width: 40px"></div>
+                        <div class="volumn-current" style="left: 40px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function () {
+                $('.tab-link').click(function () {
+                    var tab_id = $(this).attr('data-tab');
+
+                    $('.tab-link').removeClass('current');
+                    $('.tab-content').removeClass('current');
+
+                    $(this).addClass('current');
+                    $("#" + tab_id).addClass('current');
+                });
+                //play audio
+                var myaudio = document.getElementById("songAudio");
+                //click play button
+                $(".play-btn").click(function () {
+                    $(this).hide();
+                    myaudio.play();
+                    $('.pause-btn').show();
+                });
+                //click pause button
+                $(".pause-btn").click(function () {
+                    myaudio.pause();
+                    $(this).hide();
+                    $('.play-btn').show();
+                });
+                //auto click play when load page
+                $("#play-btn").click();
+                //load data and display time
+                myaudio.onloadedmetadata = function () {
+                    var durationSec = parseInt(myaudio.duration);
+                    var durationMin = Math.floor(durationSec / 60, 10);
+                    var secs = Math.floor(durationSec % 60, 20);
+                    if (secs < 10) {
+                        secs = '0' + secs;
+                    }
+                    $(".time-right").text(durationMin +':'+secs);
+                };;
+                //create time track bar
+                myaudio.addEventListener('progress', function () {
+
+                });
+                //end song
+                myaudio.addEventListener('ended', function () {
+                    console.log("end song");
+                    console.log('@PlayModel.next(Model.SongFromID.song_id, Model.SongFromID.user_id)');
+                    document.location = '@Url.Action("Play", "Play", new { id = PlayModel.next(Model.SongFromID.song_id, Model.SongFromID.user_id) })';
+                });
+                //time playing
+                myaudio.addEventListener('timeupdate', function () {
+                    //thoi gian choi dc
+                    var time = myaudio.currentTime;
+                    var minCur = Math.floor(time / 60, 10);
+                    var secCur = Math.floor(time % 60, 20);
+                    if (secCur < 10) {
+                        secCur = '0' + secCur;
+                    }
+                    $(".time-left").text(minCur + ':' + secCur);
+                    //time track
+                    var seekbar = (myaudio.currentTime / myaudio.duration) * 100 + '%';
+                    $('.played-progressbar').css({ width: seekbar });
+                    $(".played-progressbar-drag").css({left: seekbar});
+                });
+
+                //toggle loop button
+                $(".single-mode").click(function () {
+                    $(this).hide();
+                    $(".playlist-mode").show();
+                    myaudio.loop = false;
+                });
+                $(".playlist-mode").click(function () {
+                    $(this).hide();
+                    $(".single-mode").show();
+                    myaudio.loop = true;
+                });
+                var volumeDrag = false;
+                $('.volumn-total').mousedown(function (event) {
+                    volumeDrag = true;
+                    myaudio.muted = false;
+                    updateVolume(event.pageX);
+                });
+                $(document).on('mouseup', function (e) {
+                    if (volumeDrag) {
+                        volumeDrag = false;
+                        updateVolume(e.pageX);
+                    }
+                });
+                $(document).on('mousemove', function (e) {
+                    if (volumeDrag) {
+                        updateVolume(e.pageX);
+                    }
+                });
+                //volumn
+                var updateVolume = function (x) {
+                    var volume = $('.volumn-total');
+
+                    var position = x - volume.offset().left;
+                    percentage = 100 * position / volume.width();
+                    if (percentage > 100) {
+                        percentage = 100;
+                    }
+                    if (percentage < 0) {
+                        percentage = 0;
+                    }
+                    //update volume bar and video volume
+                    $('.volumn-loading').css('width', percentage + '%');
+                    $('.volumn-current').css('left', percentage + '%');
+                    myaudio.volume = percentage / 100;
+                };
+                //muted
+
+                $(".fa-volume-up").click(function () {
+                    $(this).hide();
+                    $('.fa-volume-off').show();
+                    myaudio.muted = true;
+
+                });
+                //click pause button
+                $(".fa-volume-off").click(function () {
+                    $(this).hide();
+                    $('.fa-volume-up').show();
+                    myaudio.muted = false;
+                });
+
+                //time track control
+                var timeDrag = false;
+                $('.play-progressbar').mousedown(function (event) {
+                    timeDrag = true;
+                    moveplayhead(event);
+
+                });
+                $(document).on('mouseup', function (e) {
+                    if (timeDrag) {
+                        timeDrag = false;
+                        moveplayhead(event);
+                    }
+                });
+                $(document).on('mousemove', function (e) {
+                    if (timeDrag) {
+                        moveplayhead(event);
+                    }
+                });
+                function clickPercent(event) {
+                    var timeline = $('.play-progressbar');
+                    return (event.clientX - getPosition(timeline)) / timeline.width();
+                }
+                function moveplayhead(event) {
+                    var timeline = $('.play-progressbar');
+                    var newMargLeft = event.clientX - getPosition(timeline);
+                    $('.played-progressbar').css({ width: newMargLeft });
+                    $(".played-progressbar-drag").css({ left: newMargLeft });
+                    myaudio.currentTime = myaudio.duration * clickPercent(event);
+                }
+                function getPosition(el) {
+                    return el.offset().left;
+                }
+            });
+        </script>
+
+        <!-- player control end -->
+        <!-- list-song start -->
+        <div class="list-song">
+            <ul>
+                @{
+                    var songOfUser = Model.SongOfUser;
+                }
+                @foreach (var item in songOfUser)
+                {
+                    if (item.song_id == Model.SongFromID.song_id)
+                    {
+                        <li>@Html.ActionLink(item.song_name, "Play", "Play", new { id = item.song_id }, new { @class = "currentPlaySong" })</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink(item.song_name, "Play", "Play", new { id = item.song_id }, new { })</li>
+                    }
+                }
+            </ul>
+        </div>
+        <!-- list-song end -->
+    </div>
+    <!-- right end -->
+</div>
+<!-- main end -->

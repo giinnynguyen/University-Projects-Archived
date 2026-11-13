@@ -1,0 +1,5 @@
+﻿.idea
+*.pdb
+bin/
+obj/
+*.p12

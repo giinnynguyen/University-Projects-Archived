@@ -1,0 +1,287 @@
+﻿@model HPMusic.Models.UploadModel
+
+@{
+    ViewBag.Title = "Upload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="/Assets/client/css/upload.css" rel="stylesheet" />
+<script src="/Assets/client/js/upload.js"></script>
+<script type="text/javascript" src="/Assets/client/js/tinymce/jquery.tinymce.min.js"></script>
+<script type="text/javascript" src="/Assets/client/js/tinymce/tinymce.min.js"></script>
+<section>
+    <!-- main content start-->
+    <div class="main-content">
+        <!--page wrapper start-->
+        <div id="page-wrapper">
+            <div class="mag_nav_bg mag_nav_add">
+                <div class="mag_nav w960 auto flx">
+                    <h2 class="lt g3 n f20 flz">
+                        <b class="ico m_ico lt"></b> <font>Tải bài hát lên</font>
+                    </h2>
+                </div>
+            </div>
+@using (Html.BeginForm("Upload", "Upload", FormMethod.Post, new { enctype = "multipart/form-data", @class = "m_content w960 auto" }))
+{
+        <!-- 				chon file start -->
+        <div class="up_file" id="songadd">
+            <div class="file_tit">
+                <em class="up_file_red"><font>*</font></em> <font>
+                    Chọn
+                    file âm thanh
+                </font>
+            </div>
+            <div class="file_posi">
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <span class="btn btn-primary btn-file">
+                        <span class="fileupload-exists">Change</span>
+                        <input type="file"
+                               accept="audio/*" name="file" id="file" class="inputfile" />
+                        <label for="file">Chọn tệp <span></span></label>
+                    </span> <span class="fileupload-preview"></span> <a href="#" class="close fileupload-exists"
+                                                                        data-dismiss="fileupload" style="float: none">×</a>
+
+                </div>
+                <script>
+								var inputs = document.querySelectorAll( '.inputfile' );
+Array.prototype.forEach.call( inputs, function( input )
+{
+	var label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
+
+	input.addEventListener( 'change', function( e )
+	{
+		var fileName = '';
+		if( this.files && this.files.length > 1 )
+			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+		else
+			fileName = e.target.value.split( '\\' ).pop();
+
+		if( fileName )
+			label.querySelector( 'span' ).innerHTML = fileName;
+		else
+			label.innerHTML = labelVal;
+	});
+});
+                </script>
+            </div>
+        </div>
+        <!-- 					chon file end -->
+        <!-- 					song sort start -->
+        <div class="song_sort">
+            <div class="file_tit">
+                <em class="up_file_red"><font>*</font></em> <font>
+                    Loại bài
+                    hát
+                </font>
+            </div>
+            <dl class="song_sort_clo song_sort">
+                <dt>
+                    <a class="type" href="###yc">
+                        @Html.RadioButtonFor(model=> model.Song.type, 0, new { @checked = "checked", @class = "check" })
+                       <font>
+                            Nguyên
+                            tác
+                        </font>
+                    </a>
+                </dt>
+                <dd>
+                    Yêu cầu tải lên bài hát nguyên tác, không sao chép của
+                    người khác
+                </dd>
+            </dl>
+            <dl class="song_sort">
+                <dt>
+                    <a class="type" href="###fc">
+                        @Html.RadioButtonFor(model => model.Song.type, 1, new {@class="check cover" })<font>Cover</font>
+                    </a>
+                </dt>
+                <dd>Thể hiện lại các bài hát gốc theo phong cách mới</dd>
+            </dl>
+            <dl class="song_sort_end song_sort">
+                <dt>
+                    <a class="type" href="###bz">
+                        @Html.RadioButtonFor(model => model.Song.type, 2, new { @class = "check" })<font>Đệm hát</font>
+                    </a>
+                </dt>
+                <dd>
+                    Sử dụng các nhạc cụ như kèn,sáo,đàn để độc tấu hoặc đệm hát, upload bài hát
+                    phải có quyền tác giả
+                </dd>
+            </dl>
+        </div>
+        <script>
+						$(function() {
+							//click 3 radio button
+							$(".type").click(
+									function() {
+										$(".song_sort").removeClass(
+												"song_sort_clo");
+										$(this).parent().parent().addClass(
+												"song_sort_clo");
+										$(this).find(".check").prop("checked",
+												true);
+										;
+										if ($('.cover').is(':checked')) {
+											$(".originSinger").show();
+										} else {
+											$(".originSinger").hide();
+										}
+									});
+
+						});
+        </script>
+        <!-- 					song sort end -->
+        <!-- 					song info start -->
+        <div class="yc_add songDiv">
+            <div class="add_main">
+                <table cellpadding="0" cellspacing="0" class="uplond_tb">
+                    <tbody>
+                        <!-- 									ten bai hat -->
+                        <tr>
+                            <th><em class="up_file_red">*</em>Tên bài hát</th>
+                            <td>
+                                <div class="add_main_name">
+                                    @Html.TextBoxFor(model => model.Song.song_name, null, new { @class = "up_val", size = "70" })
+                                </div>
+                            </td>
+                        </tr>
+                        <!--
+                        <tr>
+                            <th><em class="up_file_red"></em>Sáng tác: </th>
+                            <td>
+                                <div class="add_main_name">
+                                    @Html.TextBoxFor(model => model.Song.singer, null, new { @class = "up_val", size = "70" })
+                                </div>
+                            </td>
+                        </tr>
+                            -->
+                        <!-- 									ten ca si hat goc -->
+                        <tr class="originSinger" style="display: none">
+                            <th><em class="up_file_red"></em>Ca sĩ hát gốc:</th>
+                            <td>
+                                <div class="add_main_name">
+                                    @Html.TextBoxFor(model => model.Song.singer, null, new { @class = "up_val", size = "50" })
+                                    <span class="add_main_tips">&nbsp;</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- 									ngon ngu -->
+                        <tr>
+                            <th><em class="up_file_red">*</em>Ngôn ngữ:</th>
+                            <td>
+                                <div class="hp_jobs hp_language">
+                                    <ul>
+                                        <li><a class="language" href="">Việt Nam @Html.RadioButtonFor(model => model.Song.language_id,"VN", new { })</a></li>
+                                        <li><a class="language" href="">Âu Mỹ @Html.RadioButtonFor(model => model.Song.language_id, "EN", new { })</a></li>
+                                        <li><a class="language" href="">Trung Quốc @Html.RadioButtonFor(model => model.Song.language_id, "CN", new { })</a></li>
+                                        <li><a class="language" href="">Hàn Quốc @Html.RadioButtonFor(model => model.Song.language_id, "KR", new { })</a> </li>
+                                        <li><a class="language" href="">Nhật Bản @Html.RadioButtonFor(model => model.Song.language_id, "JP", new { })</a></li>
+                                        <li><a class="language" href="">Thái Lan @Html.RadioButtonFor(model => model.Song.language_id, "TH", new { })</a></li>
+                                        <li><a class="language" href="">Ấn Độ @Html.RadioButtonFor(model => model.Song.language_id, "IN", new { }) </a></li>
+                                            </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <script>
+								//script cho phan chon ngon ngu
+								$(function() {
+									//click 3 radio button
+									$(".language").on('click',function() {
+												$(".language").removeClass(
+														"language-color");
+												$(this).addClass(
+														"language-color");
+											});
+
+									$(".genre").click(function() {
+										$(".genre").removeClass("genre-color");
+										$(this).addClass("genre-color");
+									});
+								});
+                        </script>
+                        <!-- 										the loai -->
+                        <tr>
+                            <th><em class="up_file_red">*</em>Thể loại:</th>
+                            <td>
+                                <div class="hp_jobs hp_genre">
+                                    <ul>
+                                        <!--
+                                        <li><a href="">Nhạc trẻ</a></li>
+                                        <li><a href="">Cổ điển</a></li>
+                                        <li><a href="">R&amp;B</a></li>
+                                        <li><a href="">Pop</a></li>
+                                        <li><a href="">Rap/Hiphop</a></li>
+                                        <li><a href="">Ballad</a></li>
+                                        <li><a href="">Nhạc cụ</a></li>
+                                        <li><a href="">Thiếu nhi</a></li>
+                                        <li><a href="">Hiện đại</a></li>
+                                        <li><a href="">Dân ca</a></li>
+                                        <li><a href="">DJ/dance</a></li>
+                                        <li><a href="">Hòa tấu</a></li>
+                                            -->
+                                        @for (int i = 0; i < Model.Checkbox.Count(); i++)
+                                        {
+                                            <li><a href="">
+                                                    @Html.HiddenFor(x => Model.Checkbox[i].GenreID)
+                                                @Html.CheckBoxFor(x => Model.Checkbox[i].Check)
+                                                    <span>@Html.DisplayFor(x => Model.Checkbox[i].Name)
+                                                @Html.HiddenFor(x => Model.Checkbox[i].Name)
+                                                </span> 
+                                                </a></li>
+                                        }
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- 								loi bai hat -->
+                        <tr>
+                            <th><em class="up_file_red"></em>Mô tả:</th>
+                            <td>
+                                @Html.TextAreaFor(model=> model.Song.description, 5, 16, new { })
+                                <script>
+											
+    function myCustomFileBrowser(field_name, url, type, win) {
+        // Do custom browser logic
+        win.document.forms[0].elements[field_name].value = 'my browser value';
+}
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><em class="up_file_red"></em>Lời bài hát:</th>
+                            <td>
+                                @Html.TextAreaFor(model => model.Song.lyric, 5, 16, new { })
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!-- 					song info end -->
+        <div class="fc_add songDiv"></div>
+        <div class="dz_add songDiv"></div>
+        <div class="submit">
+            <input type="submit" class="btn btn-info" value="Tải lên">
+        </div>
+}
+           
+
+
+
+
+            <div class="clearfix"></div>
+            <!--page wrapper end-->
+
+        </div>
+        <!--body wrapper end-->
+        <!-- main content end-->
+        <!-- footer start -->
+        <div class="clear"></div>
+        <!-- footer end -->
+    </div>
+</section>

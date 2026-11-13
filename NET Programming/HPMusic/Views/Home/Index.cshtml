@@ -1,0 +1,422 @@
+﻿@using HPMusic.Framework
+@using HPMusic.Models
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="banner-wrap">
+
+    <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+    <div id="wowslider-container0">
+        <div class="ws_images">
+            <ul>
+                <li><img src="/Assets/client/data0/images/1.jpg" alt="1" title="1" id="wows0_0" /></li>
+                <li><img src="/Assets/client/data0/images/2.jpg" alt="2" title="2" id="wows0_1" /></li>
+                <li><img src="/Assets/client/data0/images/3.jpg" alt="3" title="3" id="wows0_2" /></li>
+                <li><img src="/Assets/client/data0/images/4.jpg" alt="4" title="4" id="wows0_3" /></li>
+                <li><a href="http://wowslider.com"><img src="/Assets/client/data0/images/5.jpg" alt="wowslider" title="5" id="wows0_4" /></a></li>
+                <li><img src="/Assets/client/data0/images/truongkiet.jpg" alt="truong-kiet" title="truong-kiet" id="wows0_5" /></li>
+            </ul>
+        </div>
+        <div class="ws_bullets">
+            <div>
+                <a href="#" title="1"><span><img src="/Assets/client/data0/tooltips/1.jpg" alt="1" />1</span></a>
+                <a href="#" title="2"><span><img src="/Assets/client/data0/tooltips/2.jpg" alt="2" />2</span></a>
+                <a href="#" title="3"><span><img src="/Assets/client/data0/tooltips/3.jpg" alt="3" />3</span></a>
+                <a href="#" title="4"><span><img src="/Assets/client/data0/tooltips/4.jpg" alt="4" />4</span></a>
+                <a href="#" title="5"><span><img src="/Assets/client/data0/tooltips/5.jpg" alt="5" />5</span></a>
+                <a href="#" title="truong-kiet"><span><img src="/Assets/client/data0/tooltips/truongkiet.jpg" alt="truong-kiet" />6</span></a>
+            </div>
+        </div><div class="ws_script" style="position:absolute;left:-99%"></div>
+        <div class="ws_shadow"></div>
+    </div>
+    <script type="text/javascript" src="/Assets/client/engine0/wowslider.js"></script>
+    <script type="text/javascript" src="/Assets/client/engine0/script.js"></script>
+    <!-- End WOWSlider.com BODY section --><!-- banner end -->
+</div>
+<!-- main start -->
+<div class="main-wrap">
+    <div class="main">
+        <!-- left start -->
+        <div class="main-left">
+            <!-- nhac theo the loai -->
+            <div class="music-type">
+                <div class="title">
+                    <div class="types">
+                        <a href="javascript:" class="current">Nổi bật</a>
+                        <span class="bar">|</span>
+                        <a href="javascript:">Nhạc trẻ</a>
+                        <span class="bar">|</span>
+                        <a href="javascript:">Pop</a>
+                        <span class="bar">|</span>
+                        <a href="javascript:">Cổ điển</a>
+                        <span class="bar">|</span>
+                        <a href="javascript:">Dân ca</a>
+                        <span class="bar">|</span>
+                        <a href="javascript:">Nước ngoài</a>
+                        <span class="bar">|</span>
+                        <a href="javascript:">Rap/Hiphop</a>
+                        <span class="bar">|</span>
+                        <a href="javascript:">Thiếu nhi</a>
+                    </div>
+                    <a href="" class="more" title="Xem thêm các thể loại nhạc">Thêm &nbsp;></a>
+                </div>
+                <div class="content">
+                    <!-- nhac pho bien -->
+                    <div class="popular">
+                        <!-- list nhac ben trai -->
+                        <div class="bar"></div>
+                        <div class="listA">
+                            <div class="title">
+                                <div class="control">
+                                    <a href="#"><span class="fa fa-spinner">&nbsp;</span>Tiếp theo</a>
+                                    <a href="#"><span class="fa fa-play-circle">&nbsp;</span>Chơi tất cả</a>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                @{
+                                    List<song> popularSong = SongDAO.popularSong();
+                                    for (int i = 0; i < 10; i++)
+                                    {
+                                        <div class="item">
+                                            <div class="normal">
+                                                @Html.ActionLink(@popularSong[i].song_name,"Play","Play", new { @id = @popularSong[i].song_id }, new {@class="song-name" })
+                                                @Html.ActionLink(@SongDAO.DisplayUsernameFromUserID(popularSong[i].user_id) ?? "-", "User", "User", new { id = popularSong[i].user_id }, new { @class = "singer" })
+                                            </div>
+                                            <div class="hover">
+                                                <div class="hover1">
+                                                    <a href="@Url.Action("Play", "Play", new { id = popularSong[i].song_id })">
+                                                    <img src="@SongDAO.avatar(popularSong[i].user_id)" alt="avatar"></a>
+                                                    <p class="theloai">@SongDAO.DisplayLanguageName(popularSong[i].song_id)</p>
+                                                </div>
+                                                <div class="hover2">
+                                                    <p>
+                                                        @Html.ActionLink(@popularSong[i].song_name, "Play", "Play", new { @id = @popularSong[i].song_id}, new { @class = "song-name" })
+                                                        <a href="" class="playlist"><span class="fa fa-headphones"></span></a>
+                                                    </p>
+                                                    <p>
+                                                        @Html.ActionLink(@SongDAO.DisplayUsernameFromUserID(popularSong[i].user_id) ?? "-", "User", "User", new { id = popularSong[i].user_id }, new { @class = "singer" })
+                                                    </p>
+                                                    <p class="info">
+                                                       @popularSong[i].lyric
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                <script>
+											$(function() {
+												$('.item').first().find('.normal').hide();
+												$('.item').first().find('.hover').show();
+											});
+									$('.list-item .item').hover(function(){
+										$('.item').find('.normal').show();
+										$('.item').find('.hover').hide();
+										$(this).find('.normal').hide();
+										$(this).find('.hover').show();
+
+									});
+                                </script>
+                            </div>
+                        </div>
+
+                        <!-- list nhac ben phai -->
+                        <div class="listB">
+                            <div class="title">
+                                <div class="control">
+                                    <a href="#"><span class="fa fa-spinner">&nbsp;</span>Tiếp theo</a>
+                                    <a href="#"><span class="fa fa-play-circle">&nbsp;</span>Chơi tất cả</a>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                @{
+                                    for (int i =10; i < 20; i++)
+                                    {
+                                        <div class="item1">
+                                            <div class="normal">
+                                                @Html.ActionLink(@popularSong[i].song_name, "Play", "Play", new { @id = @popularSong[i].song_id }, new { @class = "song-name" })
+                                                @Html.ActionLink(@SongDAO.DisplayUsernameFromUserID(popularSong[i].user_id) ?? "-", "User", "User", new { id = popularSong[i].user_id }, new { @class = "singer" })
+                                            </div>
+                                            <div class="hover">
+                                                <div class="hover1">
+                                                    <a href="@Url.Action("Play", "Play", new { id = popularSong[i].song_id })">
+                                                        <img src="@SongDAO.avatar(popularSong[i].user_id)" alt="avatar">
+                                                    </a>
+                                                    <p class="theloai">@SongDAO.DisplayLanguageName(popularSong[i].song_id)</p>
+                                                </div>
+                                                <div class="hover2">
+                                                    <p>
+                                                        @Html.ActionLink(@popularSong[i].song_name, "Play", "Play", new { @id = @popularSong[i].song_id }, new { @class = "song-name" })
+                                                        <a href="" class="playlist"><span class="fa fa-headphones"></span></a>
+                                                    </p>
+                                                    <p>
+                                                        @Html.ActionLink(@SongDAO.DisplayUsernameFromUserID(popularSong[i].user_id) ?? "-", "User", "User", new { id = popularSong[i].user_id }, new { @class = "singer" })
+                                                    </p>
+                                                    <p class="info">
+                                                        @popularSong[i].lyric
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <script>
+								$(function(){
+									$('.item1').first().find('.normal').hide();
+												$('.item1').first().find('.hover').show();
+								});
+									$('.list-item .item1').hover(function(){
+										$('.item1').find('.normal').show();
+										$('.item1').find('.hover').hide();
+										$(this).find('.normal').hide();
+										$(this).find('.hover').show();
+									});
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+            <div class="song-box">
+                <div class="tit">
+                    <div class="left">
+                        <a href="#" class="tag curr tab-link" data-tab="tab-1">Bài hát mới</a>
+                        <span class="bar">|</span>
+                        <!--<a href="#" class="tag tab-link " data-tab="tab-2">Album</a>-->
+                    </div>
+                    <a href="#" target="_blank" class="more">Thêm &nbsp;></a>
+                </div>
+                <div class="body">
+                    @{ 
+                        List<song> newSongs = SongDAO.newSongs();
+                    }
+                    <div class="song-list ct tab-content current" id="tab-1">
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <div class="item">
+                                <a href="@Url.Action("User","User",new { id = newSongs[i].user_id})" class="img">
+                                
+                               @{
+                                   var avatar = SongDAO.avatar(newSongs[i].user_id);
+                            }
+                            <img src="@SongDAO.avatar(newSongs[i].user_id)" alt="avatar"></a>
+                                <p class="bar"><span class="fa fa-headphones">&nbsp;</span>@newSongs[i].download</p>
+                                <p class="name" title="@newSongs[i].song_name">@Html.ActionLink(newSongs[i].song_name,"Play","Play",new {id= newSongs[i].song_id },new {})</p>
+                            </div>
+                        }
+                    </div>
+                    <!---->
+                    <div class="album ct tab-content" id="tab-2">
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten albumTen albumTen albumTen albumTen albumTen albumTen albumTen albumTen albumTen album</p>
+                            <p class="singer"><a href="">abcxyzabcxyzabcxyzabcxyzabcxyzabcxyzabcxyzabcxyzabcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="img"><img src="/Assets/client/img/user/3/avt.jpg" alt="img"></a>
+                            <p class="bar">Ten album</p>
+                            <p class="singer"><a href="">abcxyz</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+					$(document).ready(function(){
+						$('.tab-link').click(function(){
+							var tab_id = $(this).attr('data-tab');
+
+							$('.tag').removeClass('curr');
+							$('.tab-content').removeClass('current');
+
+							$(this).addClass('curr');
+							$("#"+tab_id).addClass('current');
+						})
+					})
+            </script>
+        </div>
+        <!-- left end -->
+        <!-- right start -->
+        <div class="main-right">
+            <div class="rank">
+                <div class="title">
+                    <h2>BẢNG XẾP HẠNG</h2>
+                </div>
+                <ul class="bxh">
+                    @for (int j = 0; j < 20; j++)
+                    {
+                        <li>
+                            <a href="@Url.Action("Play","Play",new { id = popularSong[j].song_id})" class="song" title="@popularSong[j].song_name"> <span>@(j+1).</span> @popularSong[j].song_name</a>
+                            <a href="@Url.Action("User","User",new { id = popularSong[j].user_id})" class="singer">@SongDAO.DisplayUsernameFromUserID(popularSong[j].user_id)</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <!-- right end -->
+        <div class="clear"></div>
+        <!-- top singer start -->
+        <div class="top-singer">
+            <div class="title">
+                <p>Top User <a href="" class="more">Thêm&nbsp;> </a></p>
+
+            </div>
+            <div class="body">
+                <div class="best-user">
+                    @{ int bestUser = UserDAO.topUser();}
+                    <h3><span class="fa fa-trophy"></span>&nbsp;1st</h3>
+                    <a href="@Url.Action("User","User",new { id = bestUser})" class="avt"><img src="@SongDAO.avatar(bestUser)" alt="top"></a>
+                    <p class="info">
+                        <a href="@Url.Action("User","User",new { id = bestUser})">@SongDAO.DisplayUsernameFromUserID(bestUser)</a>
+                    
+                    </p>
+                </div>
+                <div class="list-top">
+                    @{ List<int> top10User = UserDAO.top10User();}
+                    @for (int i = 0; i < top10User.Count; i++)
+                    {
+                        <div class="item">
+                            <div class="picture">
+                                <a href="#"><img src="@SongDAO.avatar(top10User[i])" alt=""></a>
+                            </div>
+                            <p class="name">
+                                <a href="#">@SongDAO.DisplayUsernameFromUserID(top10User[i])</a>
+                            </p>
+                            <div class="hover">
+                                <div class="hover-tit">
+                                    <a href="" class="head-pic">
+                                        <img src="@SongDAO.avatar(top10User[i])" alt="ád">
+                                    </a>
+                                    <p class="singer-name">
+                                        <a href="">@SongDAO.DisplayUsernameFromUserID(top10User[i])</a>
+                                    </p>
+                                    <p>
+                                        Giới tính : Nam
+                                    </p>
+                                    <p class="age ell">
+                                        Ngày sinh: 20/10/1996
+                                    </p>
+                                    <p>
+                                        Nơi ở: Đồng Nai
+                                    </p>
+                                    <p>
+                                        Nghề nghiệp: Dev
+                                    </p>
+                                </div>
+                                <div class="hover-ct">
+                                    <p>Top songs</p>
+                                    <ul>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="">Hello world</a>
+                                            <a href="" class="playbtn"><span class="fa fa-headphones"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <script>
+						$(function(){
+							$('.list-top .item').hover(function(){
+								$(this).find('.hover').show();
+							},
+							function(){
+								$(this).find('.hover').hide();
+							});
+						});
+                </script>
+            </div>
+        </div>
+        <!-- top singer end -->
+    </div>
+</div>
+
