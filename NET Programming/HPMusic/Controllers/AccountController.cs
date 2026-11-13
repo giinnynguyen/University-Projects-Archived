@@ -37,20 +37,8 @@ public class AccountController : Controller
   [AllowAnonymous]
   public ActionResult Login(string returnUrl)
   {
-    // ISSUE: reference to a compiler-generated field
-    if (AccountController.\u003C\u003Eo__8.\u003C\u003Ep__0 == null)
-    {
-      // ISSUE: reference to a compiler-generated field
-      AccountController.\u003C\u003Eo__8.\u003C\u003Ep__0 = CallSite<Func<CallSite, object, string, object>>.Create(Binder.SetMember(CSharpBinderFlags.None, "ReturnUrl", typeof (AccountController), (IEnumerable<CSharpArgumentInfo>) new CSharpArgumentInfo[2]
-      {
-        CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.None, (string) null),
-        CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.UseCompileTimeType, (string) null)
-      }));
-    }
-    // ISSUE: reference to a compiler-generated field
-    // ISSUE: reference to a compiler-generated field
-    object obj = AccountController.\u003C\u003Eo__8.\u003C\u003Ep__0.Target((CallSite) AccountController.\u003C\u003Eo__8.\u003C\u003Ep__0, this.ViewBag, returnUrl);
-    return (ActionResult) this.View();
+    ViewBag.ReturnUrl = returnUrl;
+    return View();
   }
 
   [HttpPost]
@@ -99,20 +87,8 @@ public class AccountController : Controller
           userId = user.Id,
           code = confirmationTokenAsync
         }, this.Request.Url.Scheme)}\">here</a>");
-        // ISSUE: reference to a compiler-generated field
-        if (AccountController.\u003C\u003Eo__11.\u003C\u003Ep__0 == null)
-        {
-          // ISSUE: reference to a compiler-generated field
-          AccountController.\u003C\u003Eo__11.\u003C\u003Ep__0 = CallSite<Func<CallSite, object, string, object>>.Create(Binder.SetMember(CSharpBinderFlags.None, "Message", typeof (AccountController), (IEnumerable<CSharpArgumentInfo>) new CSharpArgumentInfo[2]
-          {
-            CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.None, (string) null),
-            CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.UseCompileTimeType | CSharpArgumentInfoFlags.Constant, (string) null)
-          }));
-        }
-        // ISSUE: reference to a compiler-generated field
-        // ISSUE: reference to a compiler-generated field
-        object obj = AccountController.\u003C\u003Eo__11.\u003C\u003Ep__0.Target((CallSite) AccountController.\u003C\u003Eo__11.\u003C\u003Ep__0, this.ViewBag, "Check your email and confirm your account, you must be confirmed before you can log in.");
-        return (ActionResult) this.RedirectToAction("NotifyRegister", nameof (Register));
+        ViewBag.Message = "Check your email and confirm your account, you must be confirmed before you can log in.";
+        return RedirectToAction("NotifyRegister", nameof(Register));
       }
       this.AddErrors(result);
       user = (ApplicationUser) null;

@@ -1,0 +1,119 @@
+﻿@using HPMusic.Models
+@using HPMusic.Framework
+@{
+    ViewBag.Title = "Instrutment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <style>
+        .music-type, .content {
+            width: 100%;
+        }
+
+        .content {
+            margin-top: 10px;
+        }
+
+            .content .item {
+                float: left;
+                width: 25%;
+                margin: 15px 0;
+                position: relative;
+                height: 150px;
+            }
+
+            .content img {
+                width: 90%;
+                height: 100%;
+                border-radius: 0 0 10px 10px;
+            }
+
+            .content .item a.img {
+                overflow: hidden;
+                display: block;
+                border-radius: 10px;
+                height: 130px;
+            }
+
+                .content .item a.img:hover img {
+                    opacity: 0.6;
+                }
+
+            .content .item a:hover {
+                color: #81CDB9;
+            }
+
+            .content .item .baritem {
+                width: 90%;
+                height: 26px;
+                line-height: 26px;
+                background: rgba(0,0,0,0.5);
+                position: absolute;
+                left: 0;
+                top: 104px;
+                border-radius: 0 0 10px 10px;
+                color: #fff;
+            }
+
+            .content .item .name {
+                height: 30px;
+                line-height: 30px;
+                text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                padding: 0 10px;
+            }
+    </style>
+}
+
+<div class="main-wrap">
+    <div class="main">
+        <!-- left start -->
+        <div class="main-left">
+            <!-- nhac theo the loai -->
+            <div class="music-type">
+                <div class="title">
+                    <h2>NHẠC CỤ</h2>
+                </div>
+                <div class="content">
+                    @{ List<song> coverSong = SongDAO.SongInstrutment();}
+                    @for (int i = 0; i < coverSong.Count; i++)
+                    {
+                        <div class="item">
+                            <a href="@Url.Action("Play","Play",new { id = coverSong[i].song_id})" class="img">
+                                <img src="@SongDAO.avatar(coverSong[i].user_id)" alt="avatar">
+                            </a>
+                            <p class="baritem"><span class="fa fa-headphones">&nbsp;</span>@coverSong[i].download</p>
+                            <p class="name" title="Cơn mưa ngang qua"><a href="@Url.Action("Play","Play",new { id = coverSong[i].song_id})">@coverSong[i].song_name</a></p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- left end -->
+        <!-- right start -->
+        <div class="main-right">
+            <div class="rank">
+                <div class="title">
+                    <h2>BẢNG XẾP HẠNG</h2>
+                </div>
+                @{
+                    List<song> bxh = SongDAO.popularSong();
+                }
+                <ul class="bxh">
+                    @for (int j = 0; j < 20; j++)
+                    {
+                        <li>
+                            <a href="@Url.Action("Play","Play",new { id = bxh[j].song_id})" class="song" title="@bxh[j].song_name"> <span>@(j + 1).</span> @bxh[j].song_name</a>
+                            <a href="@Url.Action("User","User",new { id = bxh[j].user_id})" class="singer">@SongDAO.DisplayUsernameFromUserID(bxh[j].user_id)</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <!-- right end -->
+        <div class="clear"></div>
+    </div>
+</div>
